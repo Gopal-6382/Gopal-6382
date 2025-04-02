@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ಬಸ್ ಟ್ರ್ಯಾಕರ್</string>
+    <string name="menu_home">ಮುಖಪುಟ</string>
+    <string name="menu_bus_timing">ಬಸ್ ಸಮಯ</string>
+    <string name="menu_search_bus">ಬಸ್ ಹುಡುಕಿ</string>
+    <string name="menu_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="menu_feedback">ಪ್ರತಿಕ್ರಿಯೆ</string>
+    <string name="menu_share">ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="menu_add_account">ಖಾತೆ ಸೇರಿಸಿ</string>
+    <string name="menu_logout">ಲಾಗ್ ಔಟ್</string>
+</resources>

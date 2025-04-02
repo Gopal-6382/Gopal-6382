@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ਬਸ ਟਰੈਕਰ</string>
+    <string name="menu_home">ਹੋਮ</string>
+    <string name="menu_bus_timing">ਬਸ ਦਾ ਸਮਾਂ</string>
+    <string name="menu_search_bus">ਬਸ ਖੋਜੋ</string>
+    <string name="menu_settings">ਸੈਟਿੰਗ</string>
+    <string name="menu_feedback">ਫੀਡਬੈਕ</string>
+    <string name="menu_share">ਸ਼ੇਅਰ ਕਰੋ</string>
+    <string name="menu_add_account">ਅਕਾਊਂਟ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="menu_logout">ਲੌਗ ਆਉਟ</string>
+</resources>

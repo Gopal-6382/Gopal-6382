@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#34BCF8</color>
+    <color name="purple_500">#1A6C95</color>
+    <color name="purple_700">#00608A</color>
+    <color name="teal_200">#81D4FA</color>
+    <color name="teal_700">#81D4FA</color>
+    <color name="lavender">#8692f7</color>
+    <color name="grey"> #D3D3D3</color>
+    <color name="gd">#81D4FA</color>
+    <color name="primaryColor">#3F51B5</color>
+    <color name="gray">#B0BEC5</color>
+    <color name="primaryDarkColor">#0D47A1</color>
+    <color name="accentColor">#FFC107</color>
+    <color name="textColor">#212121</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="background">#F5F5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="danger">#D32F2F</color>
+
+    <!-- Primary Colors -->
+    <color name="primary_light">#34BCF8</color>
+    <color name="primary">#1A6C95</color>
+    <color name="primary_dark">#00608A</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary_light">#81D4FA</color>
+    <color name="secondary_dark">#0288D1</color>
+
+    <!-- Neutral Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_light">#D3D3D3</color>
+    <color name="grey_dark">#A9A9A9</color>
+
+    <!-- Accent Colors -->
+    <color name="accent_lavender">#8692F7</color>
+    <color name="accent_cyan">#03A9F4</color>
+
+    <color name="blue_primary">#2196F3</color>
+    <color name="blue_dark">#1976D2</color>
+
+    <color name="red_primary">#F44336</color>
+    <color name="red_dark">#D32F2F</color>
+
+    <color name="green_primary">#4CAF50</color>
+    <color name="green_dark">#388E3C</color>
+
+</resources>

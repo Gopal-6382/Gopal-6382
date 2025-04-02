@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">பஸ் டிராக்கர்</string>
+    <string name="menu_home">முகப்பு</string>
+    <string name="menu_bus_timing">பஸ் நேரம்</string>
+    <string name="menu_search_bus">பஸ்ஸை தேடுங்கள்</string>
+    <string name="menu_settings">அமைப்புகள்</string>
+    <string name="menu_feedback">கருத்து</string>
+    <string name="menu_share">பகிர்</string>
+    <string name="menu_add_account">கணக்கை சேர்</string>
+    <string name="menu_logout">வெளியேறு</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">বাস ট্র্যাকার</string>
+    <string name="menu_home">হোম</string>
+    <string name="menu_bus_timing">বাসের সময়</string>
+    <string name="menu_search_bus">বাস খুঁজুন</string>
+    <string name="menu_settings">সেটিংস</string>
+    <string name="menu_feedback">প্রতিক্রিয়া</string>
+    <string name="menu_share">শেয়ার করুন</string>
+    <string name="menu_add_account">অ্যাকাউন্ট যোগ করুন</string>
+    <string name="menu_logout">লগআউট</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">బస్ ట్రాకర్</string>
+    <string name="menu_home">హోమ్</string>
+    <string name="menu_bus_timing">బస్ సమయం</string>
+    <string name="menu_search_bus">బస్‌ను వెతకండి</string>
+    <string name="menu_settings">సెట్టింగ్స్</string>
+    <string name="menu_feedback">అభిప్రాయం</string>
+    <string name="menu_share">షేర్ చేయండి</string>
+    <string name="menu_add_account">ఖాతాను జోడించండి</string>
+    <string name="menu_logout">లాగ్అవుట్</string>
+</resources>

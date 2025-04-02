@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">बस ट्रॅकर</string>
+    <string name="menu_home">मुख्यपृष्ठ</string>
+    <string name="menu_bus_timing">बस वेळा</string>
+    <string name="menu_search_bus">बस शोधा</string>
+    <string name="menu_settings">सेटिंग्ज</string>
+    <string name="menu_feedback">प्रतिसाद</string>
+    <string name="menu_share">शेअर करा</string>
+    <string name="menu_add_account">खाते जोडा</string>
+    <string name="menu_logout">लॉगआउट</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ബസ് ട്രാക്കർ</string>
+    <string name="menu_home">ഹോം</string>
+    <string name="menu_bus_timing">ബസ് സമയം</string>
+    <string name="menu_search_bus">ബസ് തിരയുക</string>
+    <string name="menu_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="menu_feedback">ഫീഡ്ബാക്ക്</string>
+    <string name="menu_share">ഷെയർ ചെയ്യുക</string>
+    <string name="menu_add_account">അക്കൗണ്ട് ചേർക്കുക</string>
+    <string name="menu_logout">ലോഗൗട്ട്</string>
+</resources>

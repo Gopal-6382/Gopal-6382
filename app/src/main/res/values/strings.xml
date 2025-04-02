@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <!-- Menu Items -->
+    <string name="menu_home">Home</string>
+    <string name="menu_bus_timing">Bus Timing</string>
+    <string name="menu_search_bus">Search Bus</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_add_account">Add Account</string>
+    <string name="menu_logout">Logout</string>
+    <string name="privacy_policy" translatable="false">
+        <![CDATA[
+     Bus Timing is a project developed by Gopalakrishnan. This app collects minimal user data, including email addresses for authentication and usernames for personalization. Bus search history and user preferences such as theme, language, and district selection are stored locally to enhance the user experience. The app does not collect location data, payment details, or real-time tracking information.
+
+All user data is securely stored using Firebase Authentication and Firestore, while bus timing details are also maintained in a local Room Database. No personal information is shared with third parties. Users have control over their data and can delete their search history from the app settings. If an account deletion is required, users can request it via email.
+
+For any questions or concerns, please contact gopalkrishnanto@email.com
+        ]]>
+    </string>
+
+    <!-- Default Texts for TextViews -->
+    <string name="tv_title" translatable="false">Search Bus</string>
+    <string name="tv_select_district" translatable="false">Select District</string>
+    <string name="tv_select_taluk" translatable="false">Select Taluk</string>
+    <string name="tv_select_bus_stand" translatable="false">Select Bus Stand</string>
+    <string name="tv_select_route" translatable="false">Select Route</string>
+    <string name="tv_select_bus" translatable="false">Select Bus</string>
+    <string name="tv_district" translatable="false">District: Not Selected</string>
+    <string name="tv_taluk" translatable="false">Taluk: Not Selected</string>
+    <string name="tv_bus_stand" translatable="false">Bus Stand: Not Selected</string>
+    <string name="tv_route" translatable="false">Route: Not Selected</string>
+    <string name="tv_bus_name" translatable="false">Bus Name: Not Selected</string>
+
+    <!-- EditText Hints -->
+    <string name="et_search_bus_hint" translatable="false">Enter Bus Name</string>
+    <string name="et_source_hint" translatable="false">Enter Source Location</string>
+    <string name="et_destination_hint" translatable="false">Enter Destination</string>
+
+    <!-- Buttons -->
+    <string name="btn_search_bus" translatable="false">Search Bus</string>
+    <string name="btn_find_buses" translatable="false">Find Buses</string>
+    <string name="btn_show_bus_details" translatable="false">Show Bus Details</string>
+
+    <!-- UI Messages -->
+    <string name="msg_loading" translatable="false">Loading...</string>
+    <string name="msg_no_results" translatable="false">No Results Found</string>
+    <string name="msg_error" translatable="false">An Error Occurred</string>
+
+    <!-- General UI Strings -->
+    <string name="app_name">Bus Tracker</string>
+    <string name="ui_loading" translatable="false">Loading…</string>
+    <string name="ui_no_results" translatable="false">No results found</string>
+    <string name="ui_please_wait" translatable="false">Please wait…</string>
+
+    <!-- Search & Filters -->
+    <string name="search_bus" translatable="false">Search Bus</string>
+    <string name="search_source_destination" translatable="false">Search by Source and Destination</string>
+    <string name="search_enter_source" translatable="false">Enter Source Location</string>
+    <string name="search_enter_destination" translatable="false">Enter Destination</string>
+    <string name="search_enter_bus_name" translatable="false">Enter Bus Name</string>
+    <string name="search_show_bus_details" translatable="false">Show Buses</string>
+
+    <!-- Selection & Filters -->
+    <string name="select_district" translatable="false">Select District</string>
+    <string name="choose_district" translatable="false">Choose District</string>
+    <string name="select_taluk" translatable="false">Select Taluk</string>
+    <string name="choose_taluk" translatable="false">Choose Taluk</string>
+    <string name="select_bus_stand" translatable="false">Select Bus Stand</string>
+    <string name="choose_bus_stand" translatable="false">Choose Bus Stand</string>
+    <string name="select_route" translatable="false">Select Route</string>
+    <string name="choose_route" translatable="false">Choose Route</string>
+
+    <!-- Authentication (Login & Sign-Up) -->
+    <string name="auth_login" translatable="false">Login</string>
+    <string name="auth_username" translatable="false">Username</string>
+    <string name="auth_password" translatable="false">Password</string>
+    <string name="auth_forgot_password" translatable="false">Forgot password?</string>
+    <string name="auth_not_registered" translatable="false">Not yet registered? Sign Up</string>
+    <string name="auth_sign_up" translatable="false">Sign Up</string>
+    <string name="auth_email" translatable="false">Email</string>
+    <string name="auth_already_have_account" translatable="false">Already have an account? Login here</string>
+    <string name="auth_enter_username" translatable="false">Enter your username</string>
+    <string name="auth_enter_email" translatable="false">Enter your email address</string>
+    <string name="auth_enter_password" translatable="false">Enter your password</string>
+    <string name="auth_retrieve_account" translatable="false">Retrieve Account</string>
+    <string name="auth_enter_registered_email" translatable="false">Enter your registered email to retrieve username and password</string>
+
+    <!-- Confirmation & Error Messages -->
+    <string name="error_network" translatable="false">Network error. Please try again.</string>
+    <string name="error_invalid_input" translatable="false">Invalid input. Please check your details.</string>
+    <string name="confirm_exit" translatable="false">Are you sure you want to exit?</string>
+    <string name="confirm_logout" translatable="false">Are you sure you want to log out?</string>
+
+    <!-- Bus Timing Details -->
+    <string name="bus_timing_details" translatable="false">Bus Timing Details</string>
+    <string name="search_bus_timings" translatable="false">Search Bus Timings</string>
+
+    <!-- Feedback & Ratings -->
+    <string name="select_feedback_type" translatable="false">Select Feedback Type</string>
+    <string name="your_name" translatable="false">Your Name</string>
+    <string name="your_email" translatable="false">Your Email</string>
+    <string name="write_your_feedback" translatable="false">Write your feedback...</string>
+    <string name="rate_us" translatable="false">Rate Us</string>
+    <string name="submit_feedback" translatable="false">Submit Feedback</string>
+
+    <!-- App Settings -->
+    <string name="app_theme" translatable="false">App Theme</string>
+    <string name="language" translatable="false">Language</string>
+    <string name="view_privacy_policy" translatable="false">View Privacy Policy</string>
+    <string name="clear_app_data" translatable="false">Clear App Data</string>
+    <string name="update_username" translatable="false">Update Username</string>
+    <string name="enter_new_username" translatable="false">Enter new username</string>
+
+    <!-- Search & Fixed Labels -->
+    <string name="actual_time" translatable="false">Actual Time</string>
+    <string name="predicted_time" translatable="false">Predicted Time</string>
+    <string name="stop_name" translatable="false">Stop Name</string>
+    <string name="bus_name" translatable="false">Bus Name:</string>
+    <string name="route" translatable="false">Route:</string>
+    <string name="bus_stand" translatable="false">Bus Stand:</string>
+    <string name="taluk" translatable="false">Taluk:</string>
+    <string name="district" translatable="false">District:</string>
+
+    <!-- User Credentials -->
+    <string name="password" translatable="false">Password:</string>
+    <string name="username" translatable="false">Username:</string>
+    <string name="show_credentials" translatable="false">Show Credentials</string>
+    <string name="retrieve_credentials" translatable="false">Retrieve Credentials</string>
+    <string name="enter_email" translatable="false">Enter email</string>
+    <string name="enter_bus_name" translatable="false">Enter Bus Name</string>
+    <string name="enter_source" translatable="false">Enter Source</string>
+    <string name="enter_destination" translatable="false">Enter Destination</string>
+    <string name="find_buses" translatable="false">Find Buses</string>
+    <string name="show_bus_details" translatable="false">Show Bus Details</string>
+
+    <!-- Search History -->
+    <string name="search_history" translatable="false">Search History</string>
+
+</resources>

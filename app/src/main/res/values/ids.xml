@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <!-- RecyclerView IDs for List Selections -->
+        <item name="rv_districts" type="id"/>
+        <item name="rv_taluks" type="id"/>
+        <item name="rv_bus_stands" type="id"/>
+        <item name="rv_routes" type="id"/>
+        <item name="rv_buses" type="id"/>
+
+        <!-- TextView IDs for Selection Titles -->
+        <item name="tv_select_district" type="id"/>
+        <item name="tv_select_taluk" type="id"/>
+        <item name="tv_select_bus_stand" type="id"/>
+        <item name="tv_select_route" type="id"/>
+        <item name="tv_select_bus" type="id"/>
+
+        <!-- Existing UI IDs -->
+        <item name="sp_district" type="id"/>
+        <item name="sp_taluk" type="id"/>
+        <item name="sp_bus_stand" type="id"/>
+        <item name="sp_route" type="id"/>
+        <item name="sp_bus" type="id"/>
+
+        <item name="tv_title" type="id"/>
+        <item name="tv_district" type="id"/>
+        <item name="tv_taluk" type="id"/>
+        <item name="tv_bus_stand" type="id"/>
+        <item name="tv_route" type="id"/>
+        <item name="tv_bus" type="id"/>
+
+        <item name="et_search_bus" type="id"/>
+        <item name="et_source" type="id"/>
+        <item name="et_destination" type="id"/>
+
+        <item name="btn_search_bus" type="id"/>
+        <item name="btn_find_buses" type="id"/>
+        <item name="btn_show_bus_details" type="id"/>
+
+        <item name="lv_search_history" type="id"/>
+        <item name="tableLayout" type="id"/>
+    <item name="fragment_container" type="id"/>
+    <item name="actv_bus" type="id" />
+    <item name="tv_bus_name" type="id" />
+</resources>
+
+

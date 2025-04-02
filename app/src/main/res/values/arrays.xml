@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🌍 Language Options -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>தமிழ் (Tamil)</item>
+        <item>हिन्दी (Hindi)</item>
+        <item>বাংলা (Bengali)</item>
+        <item>मराठी (Marathi)</item>
+        <item>ગુજરાતી (Gujarati)</item>
+        <item>ଓଡ଼ିଆ (Odia)</item>
+        <item>ਪੰਜਾਬੀ (Punjabi)</item>
+        <item>മലയാളം (Malayalam)</item>
+    </string-array>
+
+    <!-- 🎨 Theme Selection -->
+    <string-array name="theme_names">
+        <item>Default</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>Theme.Bus</item>
+        <item>Theme.Bus.Blue</item>
+        <item>Theme.Bus.Red</item>
+        <item>Theme.Bus.Green</item>
+    </string-array>
+</resources>
