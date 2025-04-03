@@ -3,72 +3,82 @@ package com.example.bus.ui.dbs;
 import android.util.Log;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
-
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FirestoreUploader {
-    private static final String TAG = "FirestoreUploader";
+    private static final String TAG = "firestore_uploader";
 
     public static void uploadData() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        WriteBatch batch = db.batch(); // ✅ Use batch to optimize writes
+        WriteBatch batch = db.batch(); // ✅ Optimized batch writes
 
-        // ✅ District
-        String districtID = "D1"; // You can also use `db.collection("districts").document().getId();` for random ID
-        Map<String, Object> districtData = new HashMap<>();
-        districtData.put("name", "Ariyalur");
-        batch.set(db.collection("districts").document(districtID), districtData);
+        // ✅ Upload districts
+        addBatchData(batch, db, "districts", List.of(
+                Map.of("id", "d1", "name", "chennai"),
+                Map.of("id", "d2", "name", "coimbatore"),
+                Map.of("id", "d3", "name", "madurai"),
+                Map.of("id", "d4", "name", "trichy")
+        ));
 
-        // ✅ Taluk
-        String talukID = "T1";
-        Map<String, Object> talukData = new HashMap<>();
-        talukData.put("name", "Ariyalur Taluk");
-        talukData.put("districtID", districtID);
-        batch.set(db.collection("taluks").document(talukID), talukData);
+        // ✅ Upload taluks
+        addBatchData(batch, db, "taluks", List.of(
+                Map.of("id", "t1", "name", "ambattur", "district_id", "d1"),
+                Map.of("id", "t2", "name", "anna nagar", "district_id", "d2"),
+                Map.of("id", "t3", "name", "gandhipuram", "district_id", "d3"),
+                Map.of("id", "t4", "name", "thirunagar", "district_id", "d4")
+        ));
 
-        // ✅ Bus Stand
-        String busStandID = "BS1";
-        Map<String, Object> busStandData = new HashMap<>();
-        busStandData.put("name", "Ambattur Bus Stand");
-        busStandData.put("talukID", talukID);
-        batch.set(db.collection("bus_stands").document(busStandID), busStandData);
+        // ✅ Upload bus_stands
+        addBatchData(batch, db, "bus_stands", List.of(
+                Map.of("id", "bs1", "name", "ambattur bus stand", "taluk_id", "t1"),
+                Map.of("id", "bs2", "name", "anna nagar bus stand", "taluk_id", "t2"),
+                Map.of("id", "bs3", "name", "gandhipuram bus stand", "taluk_id", "t3"),
+                Map.of("id", "bs4", "name", "thirunagar bus stand", "taluk_id", "t4")
+        ));
 
-        // ✅ Route
-        String routeID = "R1";
-        Map<String, Object> routeData = new HashMap<>();
-        routeData.put("name", "Express Route");
-        routeData.put("source", "Chennai");
-        routeData.put("destination", "Coimbatore");
-        routeData.put("busStandID", busStandID);
-        batch.set(db.collection("routes").document(routeID), routeData);
+        // ✅ Upload routes
+        addBatchData(batch, db, "routes", List.of(
+                Map.of("id", "r1", "name", "express route", "source", "chennai", "destination", "coimbatore", "bus_stand_id", "bs1", "is_active", 0),
+                Map.of("id", "r2", "name", "city express", "source", "chennai", "destination", "madurai", "bus_stand_id", "bs2", "is_active", 0),
+                Map.of("id", "r3", "name", "town bus", "source", "coimbatore", "destination", "trichy", "bus_stand_id", "bs3", "is_active", 0),
+                Map.of("id", "r4", "name", "metro bus", "source", "madurai", "destination", "trichy", "bus_stand_id", "bs4", "is_active", 0)
+        ));
 
-        // ✅ Bus
-        String busID = "B1";
-        Map<String, Object> busData = new HashMap<>();
-        busData.put("name", "Ambattur Express");
-        busData.put("routeID", routeID);
-        batch.set(db.collection("buses").document(busID), busData);
+        // ✅ Upload buses
+        addBatchData(batch, db, "buses", List.of(
+                Map.of("id", "b1", "name", "ambattur express", "route_id", "r1"),
+                Map.of("id", "b2", "name", "madurai fast service", "route_id", "r2"),
+                Map.of("id", "b3", "name", "coimbatore-trichy town bus", "route_id", "r3"),
+                Map.of("id", "b4", "name", "madurai metro express", "route_id", "r4")
+        ));
 
-        // ✅ Stop
-        String stopID = "S1";
-        Map<String, Object> stopData = new HashMap<>();
-        stopData.put("stopName", "Stop 1");
-        stopData.put("stopOrder", 1);
-        stopData.put("busID", busID);
-        batch.set(db.collection("stops").document(stopID), stopData);
+        // ✅ Upload stops
+        addBatchData(batch, db, "stops", List.of(
+                Map.of("id", "s1", "stop_name", "stop 1", "stop_order", 1, "bus_id", "b1"),
+                Map.of("id", "s2", "stop_name", "stop 2", "stop_order", 2, "bus_id", "b1"),
+                Map.of("id", "s3", "stop_name", "stop 3", "stop_order", 3, "bus_id", "b1"),
+                Map.of("id", "s4", "stop_name", "stop a", "stop_order", 1, "bus_id", "b2")
+        ));
 
-        // ✅ Timing
-        String timingID = "T1";
-        Map<String, Object> timingData = new HashMap<>();
-        timingData.put("stopName", "Stop 1");
-        timingData.put("predictedTime", "10:00 AM");
-        timingData.put("actualTime", "10:05 AM");
-        timingData.put("busID", busID);
-        batch.set(db.collection("timings").document(timingID), timingData);
+        // ✅ Upload timings
+        addBatchData(batch, db, "timings", List.of(
+                Map.of("id", "t1", "stop_name", "stop 1", "predicted_time", "10:00 am", "actual_time", "10:05 am", "bus_id", "b1"),
+                Map.of("id", "t2", "stop_name", "stop 2", "predicted_time", "10:30 am", "actual_time", "10:35 am", "bus_id", "b1"),
+                Map.of("id", "t3", "stop_name", "stop 3", "predicted_time", "11:00 am", "actual_time", "11:05 am", "bus_id", "b1"),
+                Map.of("id", "t4", "stop_name", "stop a", "predicted_time", "12:00 pm", "actual_time", "12:05 pm", "bus_id", "b2")
+        ));
 
-        // ✅ Commit the batch
-        batch.commit().addOnSuccessListener(aVoid -> Log.d(TAG, "✅ Data Uploaded Successfully!"))
-                .addOnFailureListener(e -> Log.e(TAG, "❌ Upload Failed: " + e.getMessage()));
+        // ✅ Commit all data
+        batch.commit().addOnSuccessListener(aVoid -> Log.d(TAG, "✅ Firestore data uploaded successfully!"))
+                .addOnFailureListener(e -> Log.e(TAG, "❌ Upload failed: " + e.getMessage()));
+    }
+
+    // ✅ Helper function to add batch data
+    private static void addBatchData(WriteBatch batch, FirebaseFirestore db, String collection, List<Map<String, Object>> dataList) {
+        for (Map<String, Object> data : dataList) {
+            String docId = (String) data.get("id");
+            batch.set(db.collection(collection).document(docId), data);
+        }
     }
 }

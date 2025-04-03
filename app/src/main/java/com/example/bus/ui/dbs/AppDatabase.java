@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 @Database(
         entities = {DistrictEntity.class, TalukEntity.class, BusStandEntity.class,
                 RouteEntity.class, BusEntity.class, StopEntity.class, TimingEntity.class},
-        version = 6, // Increment version
+        version = 7, // Increment version
         exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase INSTANCE;

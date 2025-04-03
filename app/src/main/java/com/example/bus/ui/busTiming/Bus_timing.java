@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import com.example.bus.R;
 import com.example.bus.ui.dbs.AppDatabase;
 import com.example.bus.ui.dbs.DaoInterfaces;
@@ -23,28 +22,30 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Bus_timing extends Fragment {
+
     private TableLayout tableLayout;
     private TextView tvDistrict, tvTaluk, tvBusStand, tvRoute, tvBusName;
+    private Button btnRefresh;
     private DaoInterfaces dao;
     private String busID;
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private BusTimingViewModel viewModel;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bus_timing, container, false);
 
-        viewModel = new ViewModelProvider(requireActivity()).get(BusTimingViewModel.class);
-
+        // Initialize Database
         dao = AppDatabase.getInstance(requireContext()).daoInterfaces();
+
+        // Initialize UI Elements
         tableLayout = view.findViewById(R.id.tableLayout);
         tvDistrict = view.findViewById(R.id.tv_district);
         tvTaluk = view.findViewById(R.id.tv_taluk);
         tvBusStand = view.findViewById(R.id.tv_bus_stand);
         tvRoute = view.findViewById(R.id.tv_route);
         tvBusName = view.findViewById(R.id.tv_bus_name);
-        Button btnRefresh = view.findViewById(R.id.btn_refresh_data);
+        btnRefresh = view.findViewById(R.id.btn_refresh_data);
 
         if (getArguments() != null) {
             busID = getArguments().getString("busID");
@@ -54,6 +55,7 @@ public class Bus_timing extends Fragment {
             }
         }
 
+        // Refresh Button Click Listener
         btnRefresh.setOnClickListener(v -> {
             if (busID != null) {
                 loadBusDetails();
@@ -61,28 +63,12 @@ public class Bus_timing extends Fragment {
             }
         });
 
-        observeViewModel();
-
         return view;
     }
 
-    private void observeViewModel() {
-        viewModel.getDistrict().observe(getViewLifecycleOwner(), district -> tvDistrict.setText("District: " + (district != null ? district : "N/A")));
-        viewModel.getTaluk().observe(getViewLifecycleOwner(), taluk -> tvTaluk.setText("Taluk: " + (taluk != null ? taluk : "N/A")));
-        viewModel.getBusStand().observe(getViewLifecycleOwner(), busStand -> tvBusStand.setText("Bus Stand: " + (busStand != null ? busStand : "N/A")));
-        viewModel.getRoute().observe(getViewLifecycleOwner(), route -> tvRoute.setText("Route: " + (route != null ? route : "N/A")));
-        viewModel.getBusName().observe(getViewLifecycleOwner(), busName -> tvBusName.setText("Bus Name: " + (busName != null ? busName : "N/A")));
-
-        viewModel.getStops().observe(getViewLifecycleOwner(), stops -> {
-            if (stops != null) {
-                tableLayout.removeAllViews();
-                for (TimingEntity stop : stops) {
-                    addStopRow(stop);
-                }
-            }
-        });
-    }
-
+    /**
+     * Loads bus details including district, taluk, bus stand, route, and bus name.
+     */
     private void loadBusDetails() {
         executorService.execute(() -> {
             String district = dao.getDistrictByBusID(busID);
@@ -92,20 +78,36 @@ public class Bus_timing extends Fragment {
             String busName = dao.getBusNameByID(busID);
 
             requireActivity().runOnUiThread(() -> {
-                viewModel.setBusDetails(district, taluk, busStand, route, busName);
+                tvDistrict.setText("District: " + (district != null ? district : "N/A"));
+                tvTaluk.setText("Taluk: " + (taluk != null ? taluk : "N/A"));
+                tvBusStand.setText("Bus Stand: " + (busStand != null ? busStand : "N/A"));
+                tvRoute.setText("Route: " + (route != null ? route : "N/A"));
+                tvBusName.setText("Bus Name: " + (busName != null ? busName : "N/A"));
             });
         });
     }
 
+    /**
+     * Loads bus stops and populates the table layout dynamically.
+     */
     private void loadStops() {
         executorService.execute(() -> {
             List<TimingEntity> stops = dao.getTimingsByBus(busID);
+
             requireActivity().runOnUiThread(() -> {
-                viewModel.setStops(stops);
+                tableLayout.removeAllViews(); // Clear previous data
+
+                // Add rows for each stop
+                for (TimingEntity stop : stops) {
+                    addStopRow(stop);
+                }
             });
         });
     }
 
+    /**
+     * Adds a row dynamically using a LinearLayout to match the XML structure.
+     */
     private void addStopRow(TimingEntity stop) {
         LinearLayout rowLayout = new LinearLayout(requireContext());
         rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -116,24 +118,37 @@ public class Bus_timing extends Fragment {
         rowLayout.setPadding(8, 8, 8, 8);
         rowLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.white));
 
+        // Add Stop Name (Align left)
         addTextView(rowLayout, stop.getStopName(), true);
+
+        // Add Predicted Time (Centered)
         addTextView(rowLayout, stop.getPredictedTime(), false);
+
+        // Add Actual Time (Centered)
         addTextView(rowLayout, stop.getActualTime(), false);
 
         tableLayout.addView(rowLayout);
     }
 
+    /**
+     * Helper method to create and add a styled TextView dynamically.
+     */
     private void addTextView(LinearLayout rowLayout, String text, boolean isStopName) {
         TextView textView = new TextView(requireContext());
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                0, // Use weight-based width
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                1  // Equal weight for all columns
+        );
         textView.setLayoutParams(params);
         textView.setText(text != null ? text : "N/A");
         textView.setTextSize(16);
         textView.setTextColor(ContextCompat.getColor(requireContext(), R.color.black));
 
+        // Adjust alignment: Move Stop Name slightly left, others remain centered
         if (isStopName) {
             textView.setGravity(Gravity.START | Gravity.CENTER_VERTICAL);
-            textView.setPadding(21, 0, 0, 0);
+            textView.setPadding(21, 0, 0, 0); // Extra left padding for Stop Name
         } else {
             textView.setGravity(Gravity.CENTER);
         }

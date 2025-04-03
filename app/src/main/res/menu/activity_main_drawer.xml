@@ -19,10 +19,17 @@
             android:background="@drawable/menu_item_border"
             android:titleTextAppearance="@style/MenuItemTextStyle" />
         <item
+            android:id="@+id/search_bus_online"
+            android:icon="@drawable/ic_search"
+            android:title="@string/search_online"
+            android:orderInCategory="3"
+            android:background="@drawable/menu_item_border"
+            android:titleTextAppearance="@style/MenuItemTextStyle" />
+        <item
             android:id="@+id/bus_timing"
             android:icon="@drawable/ic_bus"
             android:title="@string/menu_bus_timing"
-            android:orderInCategory="3"
+            android:orderInCategory="4"
             android:background="@drawable/menu_item_border"
             android:titleTextAppearance="@style/MenuItemTextStyle" />
         <item
@@ -36,7 +43,7 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings"
             android:title="@string/menu_settings"
-            android:orderInCategory="4"
+            android:orderInCategory="6"
             android:background="@drawable/menu_item_border"
             android:titleTextAppearance="@style/MenuItemTextStyle" />
         <item
@@ -50,7 +57,7 @@
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
             android:title="@string/menu_logout"
-            android:orderInCategory="9"
+            android:orderInCategory="8"
             android:background="@drawable/menu_item_border"
             android:titleTextAppearance="@style/MenuItemTextStyle" />
     </group>

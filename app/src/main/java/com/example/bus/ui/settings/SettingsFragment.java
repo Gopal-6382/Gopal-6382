@@ -27,9 +27,9 @@ import java.util.Locale;
 
 public class SettingsFragment extends Fragment {
 
-    public static final String PREFS_NAME = "AppSettings";
+    private static final String PREFS_NAME = "AppSettings";
     private static final String KEY_LANGUAGE = "selected_language";
-    public static final String KEY_THEME = "selected_theme";
+    private static final String KEY_THEME = "selected_theme";
 
     private EditText edtEmailInput, edtEmailInput2, edtNewUsername;
     private TextView tvCurrentUsername, tvCurrentPassword;
@@ -274,15 +274,14 @@ public class SettingsFragment extends Fragment {
         return langCodes[position];
     }
 
-    private int getSpinnerIndex(String savedTheme, String[] themeValues) {
-        for (int i = 0; i < themeValues.length; i++) {
-            if (themeValues[i].equals(savedTheme)) {
+    private int getSpinnerIndex(String value, String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)) {
                 return i;
             }
         }
-        return 0; // Default to first theme if not found
+        return 0;
     }
-
 
     private void showToast(String message) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();

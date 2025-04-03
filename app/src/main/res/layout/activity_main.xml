@@ -11,6 +11,7 @@
     tools:openDrawer="start"
     >
 
+
     <include
         android:id="@+id/app_bar_main"
         layout="@layout/app_bar_main"
@@ -27,6 +28,6 @@
         app:itemIconPadding="30dp"
         android:padding="0dp"
         android:background="@color/gd"
-/>
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

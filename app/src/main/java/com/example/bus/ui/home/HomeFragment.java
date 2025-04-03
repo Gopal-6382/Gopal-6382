@@ -48,15 +48,17 @@ public class HomeFragment extends Fragment {
             requireActivity().runOnUiThread(() -> {
                 if (!isAdded()) return;
 
-                if (!searchResults.isEmpty()) {
-                    textNoHistory.setVisibility(View.GONE);
+                if (searchResults != null && !searchResults.isEmpty()) {
                     recyclerView.setVisibility(View.VISIBLE);
+                    textNoHistory.setVisibility(View.GONE);
                     adapter.updateSearchHistory(searchResults);
                 } else {
-                    textNoHistory.setVisibility(View.VISIBLE);
                     recyclerView.setVisibility(View.GONE);
+                    textNoHistory.setVisibility(View.VISIBLE);
+                    adapter.updateSearchHistory(new ArrayList<>()); // Clear the list properly
                 }
             });
+
         });
     }
 }

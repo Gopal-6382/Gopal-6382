@@ -27,7 +27,6 @@ android {
             )
         }
         debug {
-            // Enable debugging tools for the debug build
             isMinifyEnabled = false
         }
     }
@@ -43,23 +42,18 @@ android {
 }
 
 dependencies {
-    // Firebase platform for unified versioning
-    implementation(platform(libs.firebase.bom))
-    implementation (libs.androidx.room.runtime)
-    annotationProcessor (libs.androidx.room.compiler)
+    implementation(platform(libs.firebase.bom)) // Firebase BOM
+
     // Firebase services
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.firebase.database)
+    implementation(libs.firebase.crashlytics)
+
+    // Play Services Authentication
     implementation(libs.play.services.auth)
-    implementation (libs.play.services.auth.v2050)
+
     // AndroidX Libraries
-
-    implementation (libs.firebase.core)
-    implementation (libs.firebase.firestore.v2460)
-    implementation (libs.firebase.crashlytics.v1837)
-
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -68,20 +62,15 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.activity.ktx)
-    implementation(libs.activity.ktx.v182)
-    implementation (libs.firebase.firestore.v2412)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.runtime)
 
-    // Lottie for animations
-    implementation(libs.lottie)
-    implementation(libs.lottie.compose)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation (libs.androidx.cardview)
 
-
-
+    // Lottie for animations
+    implementation(libs.lottie)
+    annotationProcessor(libs.androidx.room.compiler)
 }
