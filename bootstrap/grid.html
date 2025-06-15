@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container {
+            background: #bdc3c7;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .row {
+            background: #2c3e50;
+            padding: 10px;
+            height: 150px;
+            border: 2px solid white;
+        }
+
+        .col,
+        .col-2,
+        .col-4 {
+            background-color: rosybrown;
+            height: 50px;
+            padding: 10px;
+            border: 2px solid white;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .hi:nth-child(2) {
+            font-size: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            vertical align-items-center
+        </h1>
+        <h3>row</h3>
+        <ul>
+            <li>For entire row</li>
+            <li>align-items-start</li>
+            <li>align-items-center</li>
+            <li>align-items-end</li>
+            <li>align-items-baseline</li>
+        </ul>
+        <ol>
+            <li>for single box</li>
+            <li>For single coloumn</li>
+            <li>align-self-start</li>
+            <li>align-self-end</li>
+            <li>align-self-center</li>
+            <li>align-self-baseline</li>
+        </ol>
+        <h1>Also we can use for responsive then you can use that means break points </h1>
+        <ul>
+            <li> align-items-md-center</li>
+            <li> align-items-xs-end</li>
+            <li> align-items-start</li>
+            <li> align-items-xxl-center</li>
+            <li> align-self-md-center</li>
+            <li> align-self-xs-center</li>
+            <li>align-self-xxl-center</li>
+        </ul>
+
+    </div>
+    <div class="container">
+        <h1>Horizontal alignment</h1>
+        <h3>Column</h3>
+        <ul>
+            <li>justify-content-start</li>
+            <li>justify-content-end</li>
+            <li>justify-content-center</li>
+            <li>justify-content-baseline</li>
+        </ul>
+        <ol>
+            <li>For single box</li>
+            <li>justify-self</li>
+            <li>order propertiy</li>
+        </ol>
+        <h1>Also we can use for responsive then you can use that means break points </h1>
+        <ul>
+            <li> justify-content-md-around</li>
+            <li> justify-content-xl-baseline</li>
+            <li> justify-content-sm-end</li>
+            <li> justify-content-xxl-start</li>
+            <li> justify-content-md-center</li>
+            <li> justify-content-sm-between</li>
+            <li>justify-content-xs-evenly</li>
+        </ul>
+    </div>
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+        <div class="row align-items-start ">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+        <div class="row align-items-baseline">
+            <div class="col hi">1</div>
+            <div class="col hi">2</div>
+            <div class="col hi">3</div>
+            <div class="col hi">4</div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row ">
+            <div class="col align-self-start">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+        <div class="row  ">
+            <div class="col">1</div>
+            <div class="col align-self-center">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+        </div>
+        <div class="row ">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col align-self-end">4</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col  hi">1</div>
+            <div class="col align-self-baseline hi">2</div>
+            <div class="col  hi">3</div>
+            <div class="col hi">4</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" row justify-content-center ">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+        </div>
+        <div class=" row justify-content-start">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+        </div>
+        <div class=" row justify-content-end ">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+        </div>
+        <div class=" row justify-content-around ">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+        </div>
+        <div class=" row justify-content-evenly ">
+            <div class="col-4">1</div>
+            <div class="col-4">2</div>
+        </div>
+        <div class=" row  justify-content-sm-between ">
+            <div class="col-4 ">1</div>
+            <div class="col-4">2</div>
+        </div>
+    </div>
+    <div class="container ">
+        <h1>order property</h1>
+        <div class="row justify-content-around">
+            <div class="col-2 order-3">1</div>
+            <div class="col-2 order-0">2</div>
+            <div class="col-2 order-lg-3">3</div>
+            <div class="col-2 order-md-2">4</div>
+        </div>
+        </div>
+</body>
+
+</html>
