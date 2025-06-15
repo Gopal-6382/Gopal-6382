@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .custom-popover {
+            --bs-popover-max-width: 400px;
+            --bs-popover-border-color: tomato;
+            --bs-popover-header-bg: tomato;
+            --bs-popover-header-color: #fff;
+            --bs-popover-body-padding-x:2rem;
+            --bs-popover-body-padding-y:2rem;
+        }
+    </style>
+</head>
+<div class="container my-3">
+    <h5 class="text-danger py-2 mt-3">Popover in bootstrap</h5>
+
+    <p class="text-success border-bottom py-2 mt-3">Basic Popovers Example </p>
+    <button type="button" class="btn btn-success" data-bs-title="Popover title"
+        data-bs-content="And here's some amazing content.It's very engaging.Right?" data-bs-toggle="popover">Click
+        Me</button>
+
+    <p class="text-success border-bottom py-2 mt-3">Popover plcement </p>
+
+    <button data-bs-content="Content top" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="popover Top"
+        data-bs-placement="Top" type="button">Popover on Top</button>
+
+    <button data-bs-content="Content Right " class="btn btn-primary" data-bs-toggle="popover"
+        data-bs-title="popover Right" data-bs-placement="Right" type="button">Popover on Right</button>
+
+    <button data-bs-content="Content Bottom" class="btn btn-primary" data-bs-toggle="popover"
+        data-bs-title="popover Bottom" data-bs-placement="Bottom" type="button">Popover on Bottom</button>
+
+    <button data-bs-content="Content Left " class="btn btn-primary mt-2 " data-bs-toggle="popover"
+        data-bs-title="popover Left" data-bs-placement="Left" type="button">Popover on Left</button>
+
+    <p class="text-success border-bottom py-2 mt-3">Popover plcement </p>
+
+    <button type="button" class="btn btn-success" data-bs-custom-class="custom-popover" data-bs-title="Popover title"
+        data-bs-content="And here's some amazing content.It's very engaging.Right?" data-bs-toggle="popover">Click
+        Me</button>
+</div>
+<script src="js/bootstrap.bundle.js"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map
+        ((popoverTriggerE1) => new bootstrap.Popover(popoverTriggerE1));
+</script>
+
+<body>
+
+</body>
+
+</html>
