@@ -32,52 +32,42 @@
 
 ## 🌱 Learning Journey
 
-- 🔭 Starting with: HTML, CSS, JavaScript
-- 🎯 Focused on: Responsive UI, clean layouts
-- 🚀 Next: React basics & animations
-- 📘 Goal: Build personal projects to show my progress
+- 🔭 Starting with: HTML, CSS, JavaScript  
+- 🎯 Focused on: Responsive UI, clean layouts  
+- 🚀 Next: React basics & animations  
+- 📘 Goal: Build personal projects to show my progress  
 
 ---
 
 ## 🌐 Connect with Me
 
-<p align="center">
+<p align="center"> 
   <a href="https://linkedin.com/in/gopalkrishnan-dev" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://dev.to/YOUR_USERNAME" target="_blank">
-    <img src="https://img.shields.io/badge/Dev.to-0A0A0A?style=flat&logo=dev.to&logoColor=white" />
-  </a>
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a> 
   <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" />
-  </a>
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+  </a> 
   <a href="https://fiverr.com/YOUR_USERNAME" target="_blank">
-    <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=flat&logo=fiverr&logoColor=white" />
-  </a>
+    <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" />
+  </a> 
 </p>
 
----
-<p align="center"> <a href="https://linkedin.com/in/gopalkrishnan-dev" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" /> </a> <a href="https://instagram.com/YOUR_USERNAME" target="_blank"> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /> </a> <a href="https://fiverr.com/YOUR_USERNAME" target="_blank"> <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" /> </a> </p>
 ## 💼 Projects Coming Soon
 
-| Project             | Tech Used              | Status     |
-|---------------------|------------------------|------------|
-| Portfolio Website   | HTML, CSS              | 🚧 Building |
-| To-Do List App      | HTML, JS               | 🧠 Planning |
-| Weather Web App     | JS, OpenWeather API    | 🧠 Planning |
+| Project             | Tech Used              | Status       |
+|---------------------|------------------------|--------------|
+| Portfolio Website   | HTML, CSS              | 🚧 Building  |
+| To-Do List App      | HTML, JS               | 🧠 Planning  |
+| Weather Web App     | JS, OpenWeather API    | 🧠 Planning  |
 
 ---
-| Project | Tech | Status |
-|--------|------|--------|
-| 🌐 Portfolio Site | HTML/CSS/JS | 🔨 Building |
-| ✅ To-Do App | JavaScript | 🧠 Planning |
-| 🌦️ Weather App | JS + API | 💡 Idea |
-<p align="center"> <img src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif" width="200px" /> </p> <p align="center"><i>Thanks for stopping by! Let's build the web — one pixel at a time.</i></p> ```
+
 ## 🧠 Currently Practicing
 
 ```text
-📅 June 2025
-✅ Basic HTML/CSS layouts
-✅ JavaScript fundamentals
-⬜ Responsive mobile design
-⬜ React components
+📅 June 2025  
+✅ Basic HTML/CSS layouts  
+✅ JavaScript fundamentals  
+⬜ Responsive mobile design  
+⬜ React components  
