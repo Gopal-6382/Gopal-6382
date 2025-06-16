@@ -61,9 +61,16 @@ import ReactDOM from "react-dom/client";
 //   </React.StrictMode>
 // );
 
-import { FormData1 } from "./components/Form/FormData";
+// import { FormData1 } from "./components/Form/FormData";
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <FormData1 />
+//   </React.StrictMode>
+// );
+
+import { Table } from "./components/Table/Table";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FormData1 />
+    <Table />
   </React.StrictMode>
 );
