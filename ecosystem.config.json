@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "my-frontend",
+      "script": "npm",
+      "args": "run dev",
+      "watch": true
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+@use "bootstrap" as *;
+
+body {
+  background-color: #96c7ee;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  align-items: stretch;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #170ff1;
+  color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 10px 20px -10px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: #1a0ff1;
+    border: 1px solid #f0f0f0;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 20px 30px -10px;
+  }
+
+  h3 {
+    margin: 10px 0 5px;
+  }
+
+  .name {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .s {
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fffcfc;
+    border-radius: 50%;
+    padding: 7px;
+    margin: 0 auto 10px;
+  }
+
+  .badge {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    color: #f0f0f0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.online {
+      background-color: green;
+    }
+
+    &.offline {
+      background-color: red;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    .primary {
+      border: 2px solid #01010c;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 600;
+      background-color: #1316c9;
+      color: #f0f0f0;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: #01010c;
+        transform: translateY(-5px);
+      }
+
+      &.outline {
+        background: transparent;
+
+        &:hover {
+          background-color: #01010c;
+        }
+      }
+    }
+  }
+
+  .skills {
+    padding: 15px;
+    margin-top: 15px;
+    text-transform: capitalize;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    li {
+      padding: 6px 10px;
+      border: 2px solid #0325e7;
+      border-radius: 5px;
+      font-size: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #f0f0f0;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  background-color: #f8f9fa;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
