@@ -120,7 +120,7 @@ export const Table = () => {
               id="marriedYes"
               className="form-check-input"
               checked={user.isMarried === true}
-              onChange={handlFeInputChange}
+              onChange={handleInputChange}
             />
             <label className="form-check-label" htmlFor="marriedYes">
               Married
