@@ -15,11 +15,20 @@ export const Table = () => {
     gaming: true,
     coding: true,
   });
+  console.log("📦 Current User State:", user);
+  console.log("🎮 Hobby State:", hobbyState);
 
   const handleInputChange = (e) => {
     const { name, type, value, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
-    setUser((prev) => ({ ...prev, [name]: newValue }));
+    //
+
+    console.log("🟢 INPUT CHANGED:");
+    console.log("Type:", type);
+    console.log("Name:", name);
+    console.log("Value:", value);
+    console.log("Checked:", checked);
+    console.log("NewValue:", newValue);
 
     if (name in hobbyState) {
       const updatedHobbyState = { ...hobbyState, [name]: newValue };
@@ -111,7 +120,7 @@ export const Table = () => {
               id="marriedYes"
               className="form-check-input"
               checked={user.isMarried === true}
-              onChange={handleInputChange}
+              onChange={handlFeInputChange}
             />
             <label className="form-check-label" htmlFor="marriedYes">
               Married
