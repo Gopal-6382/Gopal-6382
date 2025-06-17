@@ -1,0 +1,19 @@
+/*
+Ramesh's basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+
+The program starts by importing the java.util.Scanner package, which allows the user to input data into the program.
+Then, it declares three variables of float data type - bs (basic salary), da (dearness allowance), and rh (rent/house allowance).
+The program then prompts the user to enter the basic salary by displaying the message "Enter the Basic Salary :". It takes the input using the Scanner object and stores it in the bs variable.
+Next, the program calculates the da and rh values using the given formula - DA is 40% of the basic salary (bs*0.4f), and RH is 20% of the basic salary (bs*0.2f).
+Finally, the program calculates the total gross salary by adding the bs, da, and rh values and displays the result using the System.out.println() method.
+ */
+
+        float bs, da, rh, gs;
+        Scanner in = new Scanner(System.in);
+        bs = in.nextFloat();
+        da = bs * 0.4f;
+        rh = bs * 0.2f;
+        gs = bs + da + rh;
+        System.out.println("the dearness is " +da);
+        System.out.println("the rent house is " +rh);
+        System.out.println("the gross is " +gs);
