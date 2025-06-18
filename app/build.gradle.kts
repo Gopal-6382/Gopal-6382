@@ -64,6 +64,10 @@ dependencies {
     implementation(libs.activity.ktx)
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.annotation.jvm)
+    implementation(libs.androidx.drawerlayout)
+    implementation(libs.androidx.fragment)
 
     // Testing
     testImplementation(libs.junit)

@@ -21,7 +21,7 @@
         <item
             android:id="@+id/search_bus_online"
             android:icon="@drawable/ic_search"
-            android:title="@string/search_online"
+            android:title="@string/menu_search_bus"
             android:orderInCategory="3"
             android:background="@drawable/menu_item_border"
             android:titleTextAppearance="@style/MenuItemTextStyle" />
