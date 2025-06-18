@@ -1,0 +1,15 @@
+ul li:first-child{
+    color: gray;
+}
+ul li:last-child{
+    color: gray ;
+}
+ul li:nth-child(2){
+    color: gray;
+}
+ul li:nth-child(3){
+    color: gray;
+}
+ul li:nth-child(even){
+    color: rgb(245, 0, 0);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    body{
+        text-align: center;
+        padding:30px 0;
+    }  
+    h1{
+        font-size: 60px;
+        line-height: 1;
+        color: rgb(50,50,50);
+    }  
+    h1.i{
+        display: inline-block;
+        position: relative;
+    }
+    h1.i::before,
+    h1.i::after{
+        content: "";
+        display: block;
+        background-color: red;
+        width: 60px;
+        height: 60px;
+        top: 0;
+        position: absolute;
+        border-top: solid 30px transparent;
+        border-bottom: solid 30px transparent;
+    }
+    h1.i::before{
+        left:-70px;
+        border-right: solid 60px green;
+    }
+    h1.i::after{
+        right:-70px;
+        border-left: solid 60px rgb(225,150,50);
+    }
+
+    </style>
+</head>
+<body>
+   <h1 class="i">Before & after pseudo-elements </h1>
+</body>
+</html>

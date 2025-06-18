@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :root {
+            --bgcolor: rgb(134, 203, 134);
+            --color: blue;
+        }
+
+        p {
+            background-color: var(--bgcolor);
+            color: var(--color);
+        }
+
+        h1 {
+            background-color: var(--bgcolor);
+            color: var(--color);
+        }*/
+        .list-1 li:first-child {
+            color: blue;
+        }
+
+        .list-1 li:last-child {
+            color: rgb(255, 0, 55);
+        }
+
+        .list-2 li:first-child {
+            color: blue;
+        }
+
+        .list-2 li:last-child {
+            color: rgb(247, 0, 45);
+        }
+
+        p:first-child {
+            color: red;
+        }
+
+        p:last-child {
+            color: blue;
+        }
+
+        div :nth-child(2)
+
+        /* its also many varaity*/
+            {
+            color: green;
+        }
+
+        li:nth-last-of-type(2) {
+            color: aquamarine;
+        }
+
+        li:nth-last-of-type(5) {
+            color: rgb(0, 238, 255);
+        }
+
+        h1:only-child {
+            color: darkgoldenrod;
+            /*it means only on chid have*/
+        }
+
+        h2:only-of-type {
+            color: yellow;
+        }
+
+        p:empty {
+            padding: 20px;
+            border: solid 3px rgb(255, 0, 221);
+        }
+/*p:not(.para){
+    color: darkorange;
+}*/
+        /* its wants parent that means the div remove that not work*/
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <h1>CSS CLASS SELECTOR </h1>
+    </ul>
+    <h2>ONLY OF TYPE</h2>
+    <!--<h1>:ROOT PSEUDO SELECTOR</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui exercitationem eos natus illum eum necessitatibus
+        quam voluptas vero ab distinctio veniam culpa aperiam eveniet, ipsum nemo non commodi. Maiores, incidunt!</p> -->
+    <ul class="list-1">
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+    </ul>
+    <ul class="list-2">
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur.</li>
+    </ul>
+    <div>
+        <p><b>para-1</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, modi illum quod facere quae non
+            blanditiis tempora ratione exercitationem error?</p>
+        <p><b>para-2</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, modi illum quod facere quae non
+            blanditiis tempora ratione exercitationem error?</p>
+        <p><b>para-3</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, modi illum quod facere quae non
+            blanditiis tempora ratione exercitationem error?</p>
+    </div>
+    <p></p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa officia officiis animi
+        repudiandae perspiciatis, sed aliquam reprehenderit magnam. Voluptas error harum odio quidem iste ducimus.
+        Perspiciatis excepturi optio tempora!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse tempora quidem autem id delectus quas perspiciatis
+        magni sint provident harum, odio non impedit molestias blanditiis quia minima assumenda, ipsum mollitia.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa officia officiis animi
+        repudiandae perspiciatis, sed aliquam reprehenderit magnam. Voluptas error harum odio quidem iste ducimus.
+        Perspiciatis excepturi optio tempora!</p>
+</body>
+
+</html>

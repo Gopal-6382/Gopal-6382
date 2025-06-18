@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1 {
+            background-color: rgb(124, 186, 241);
+        }
+
+        #d2 {
+            background-color: rgb(2, 137, 255);
+        }
+
+        #d1 h2,
+        #d1 h3,
+        #d1 h4 {
+            color: red;
+        }
+
+        #d1 :is(h2, h3, h4) {
+            color: green;
+        }
+        #d1 :is(h2, h3, h4) {
+            color: green;
+        }
+        :is(#d1,#d2) h2{
+            color: brown;
+        }
+        :is(#d1,#d2) :is(h2,p){
+            color: brown;
+        }
+        :is(#d1,#d2) h2:hover{
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>:IS() CSS PSEUDO CLASS SELECTOR</h1>
+    <div id="d1">
+        <h2>H2- HEADING ONE</h2>
+        <h3>H3- SUB HEADING-1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus assumenda aspernatur, cupiditate ea
+            maxime deserunt ratione reprehenderit doloremque cumque velit! Atque iusto at iste magnam optio,
+            reprehenderit repudiandae dolores eaque!</p>
+        <h4>H4- SUB HEADING-2</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio perferendis dolorem non doloremque iusto
+            recusandae labore consequuntur! Perspiciatis pariatur nam quisquam sapiente commodi ullam adipisci in,
+            magnam iste repellendus molestias.</p>
+    </div>
+    <hr>
+    <div id="d2">
+        <h2>H2 - HEADING TWO</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, exercitationem optio autem maiores, natus
+            asperiores ullam esse facilis ut, dolores qui nulla suscipit odio quia. Consectetur possimus qui quisquam
+            porro.</p>
+
+    </div>
+    <p><b>outside</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex voluptate asperiores vero
+        molestiae eum quasi velit, pariatur nam praesentium modi, excepturi similique exercitationem iste alias
+        temporibus. Dolore, optio veniam!</p>
+</body>
+
+</html>

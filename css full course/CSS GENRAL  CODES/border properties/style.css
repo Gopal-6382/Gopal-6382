@@ -1,0 +1,14 @@
+div {
+    background: teal;
+    width: 300px;
+    height: 300px;
+    /*border-top-width: 10px;
+    border-top-color: brown;
+    border-top-style: double;
+    border-top-style: solid;
+    border-top-style: groove;
+    border-left-width: 10px;
+    border-left-color: rgb(0, 255, 76);
+    border-left-style: dotted;*/
+    border: 10px solid red;
+}

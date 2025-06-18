@@ -1,0 +1,18 @@
+.box{
+    width: 800px;
+    height: 500px;
+    background: gray;
+    position: relative;
+}
+.box div{
+    height: 100px;
+    width: 100px;
+    background: rgb(243, 0, 0);
+    margin: 70px ;
+    text-align: center;
+    
+}
+.box-1{
+    background: green !important;
+    position: absolute;
+}

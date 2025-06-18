@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background: burlywood;
+}
+.board{
+    background: brown;
+    height: 800px;
+    width: 800px;
+   align-items: center;
+   margin-left: 25%;
+   
+ 
+}
+.box{
+    background: rgb(185, 58, 58);
+    
+    width: 100px;
+    height: 100px;
+    border: 3px solid black !important;
+    float: left;
+    
+}
+
+.row1 :nth-child(even){
+    background: blue;
+}
+.row2 :nth-child(odd){
+    background: blue;
+}.row3 :nth-child(even){
+    background: blue;
+}.row4 :nth-child(odd){
+    background: blue;
+}.row5 :nth-child(even){
+    background: blue;
+}
+.row6 :nth-child(odd){
+    background: blue;
+}
+.row7 :nth-child(even){
+    background: blue;
+}
+.row8 :nth-child(odd){
+    background: blue;
+}
+.row7 {
+    font-size: 70px;
+    text-align: center;
+color: rgb(255, 148, 0);
+}
+.row8 {
+    font-size: 70px;
+    text-align: center;
+color: rgb(255, 145, 0);
+}
+.row1{
+    font-size: 70px;
+    text-align: center;
+color: rgb(101, 60, 7);
+}
+.row2{
+    font-size: 70px;
+    text-align: center;
+color: rgb(101, 60, 7);
+color: 
+}
+.box:hover{
+    background: rgba(193, 154, 11, 0.557);
+}
+

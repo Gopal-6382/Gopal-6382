@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            border: 1px solid whitesmoke;
+            min-width: 600px;
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+       .content{
+            overflow: hidden;
+             max-height: 0px;
+             transition: max-height 0.5s linear;
+        }
+
+       .content p {
+            padding: 15px;
+        }
+        .title{
+            display: block;
+            padding: 10px;
+            font-size: 1em;
+            background-color: green;
+            color: rgb(6, 139, 255);
+            border: 1px solid greenyellow;
+            transition: all 0.5s;
+        }
+        .content:target{
+            max-height: 150px;
+        }
+        .title:hover{
+            background-color: rgba(108, 221, 108, 0.415);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="item">
+            <a href="#tab1" class="title">Tittle-1</a>
+            <div id="tab1" class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cum veniam, fuga provident cumque,
+                    iure, odio quas doloribus inventore maxime enim quod obcaecati unde reiciendis at doloremque?</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="#tab2" class="title">Tittle-1</a>
+            <div id="tab2" class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cum veniam, fuga provident cumque,
+                    iure, odio quas doloribus inventore maxime enim quod obcaecati unde reiciendis at doloremque?</p>
+            </div>
+        </div>
+        <div class="item">
+            <a href="#tab3" class="title">Tittle-1</a>
+            <div id="tab3" class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis cum veniam, fuga provident cumque,
+                    iure, odio quas doloribus inventore maxime enim quod obcaecati unde reiciendis at doloremque?</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

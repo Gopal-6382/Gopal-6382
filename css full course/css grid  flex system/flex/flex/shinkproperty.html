@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            border: 3px solid blueviolet;
+        }
+
+        .box {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .box-1 {
+            background-color: red;
+        }
+
+        .box-2 {
+            background-color: blue;
+        }
+
+        .box-3 {
+            background-color: green;
+        }
+
+        .box-4 {
+            background-color: yellow;
+        }
+
+        .box-5 {
+            background-color: violet;
+        }
+
+        .box-6 {
+            background-color: navy;
+        }
+
+        .box-7 {
+            background-color: black;
+        }
+
+        .box-8 {
+            background-color: orange;
+        }
+
+        .box-9 {
+            background-color: pink;
+        }
+
+        .container {
+            display: flex;
+            height: 600px;
+            /*  flex-direction: column; y axis*/
+            align-items: stretch;
+        }
+
+        .box-1 {
+            /*
+the value based on units names
+eg:flex: 1;grow value
+flex grow,bsasis
+grow shrink 
+flex grow , shrink , basis eg:flex: 0 1 auto;
+flex: 0  40px;*/
+            align-self: auto;
+            /*default*/
+
+        }
+
+        .box-4 {
+            align-self: flex-start;
+        }
+
+        .box-2 {
+            align-self: center;
+        }
+
+        /*
+        .box {
+                flex-shrink: 0;
+                can't hide box6,7,8,9
+                flex-shrink: 1;
+                default
+                flex-basis: auto;
+        }
+        .box-1{
+            flex-shrink: 3;
+            flex-basis: 40%;
+            grow and shrink 
+            based on given value not all are equal
+            flex-grow: 1; 
+        }
+              */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box-1">box-1 </div>
+        <div class="box box-2">box-2</div>
+        <div class="box box-3">box-3</div>
+        <div class="box box-4">box-4</div>
+        <div class="box box-5">box-5</div>
+        <div class="box box-6">box-6</div>
+        <div class="box box-7">box-7</div>
+        <div class="box box-8">box-8</div>
+        <div class="box box-9">box-9</div>
+    </div>
+</body>
+
+</html>

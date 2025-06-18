@@ -1,0 +1,13 @@
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 150px;
+    background: -webkit-linear-gradient(red 10px,yellow 65%,orange  );
+    /*border-radius: 50%;*/
+   box-shadow:/*for shadow x axis*/ 15px /*for shadow y axis*/ 15px /*opacity of the shadow */6px /*the value size*/7px rgba(0,0,0,0.15);
+}
+/*.shadow{
+    -webkit-box-shadow:5px 5px 1px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow:5px 5px 1px 0px rgba(0,0,0,0.15);
+    bo-
+}*/

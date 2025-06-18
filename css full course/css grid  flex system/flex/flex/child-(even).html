@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 5px greenyellow solid;
+            padding: 10px;
+        }
+
+        .box {
+            padding: 30px;
+            border: 2px solid yellow;
+            margin: 10px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: unset;
+            */
+
+        }
+        .box:nth-of-type(odd){
+            background-color: aqua;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">item-1</div>
+        <div class="box">item-2</div>
+        <div class="box">item-3</div>
+        <div class="box">item-4</div>
+        <div class="box">item-5</div>
+    </div>
+</body>
+
+</html>

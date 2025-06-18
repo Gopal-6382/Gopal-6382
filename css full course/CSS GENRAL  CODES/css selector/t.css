@@ -1,0 +1,70 @@
+div a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+    text-align: center;
+    line-height: 30px;
+}
+
+a:hover {
+    background-color: teal;
+    color: azure;
+}
+
+a:visited {
+    color: red;
+    background-color: darkorchid;
+}
+
+a:active {
+    background-color: yellow;
+    color: aquamarine;
+}
+
+#txt:focus {
+    outline: none;
+    border: 6px solid green;
+    padding: 7px;
+    margin-top: 30px;
+}
+
+input[type="checkbox"]:checked {
+
+    box-shadow: 0 0px 0 3px red;
+}
+
+input[type="text"]:enabled {
+    background-color: blueviolet;
+}
+
+input[type="text"]:disabled {
+    background-color: rgb(226, 43, 43);
+}
+
+input[type="text"]:required {
+    background-color: rgb(43, 226, 76);
+}
+
+input[type="email"]:read-only {
+    background-color: rgb(131, 131, 131);
+}
+
+input[type="email"]:read-write {
+    background-color: rgb(193, 22, 141);
+}
+
+input[type="text"]:invalid{
+    background-color: rgb(193, 22, 22);
+}
+
+input[type="text"]:valid {
+    background-color: rgb(36, 193, 22);
+}
+input[type="radio"]:default{
+    box-shadow: 0 0 0 3px green;
+    /*defalut*/
+}
+option:default{
+    color: rgb(170, 255, 0);
+}

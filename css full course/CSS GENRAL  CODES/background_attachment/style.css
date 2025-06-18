@@ -1,0 +1,10 @@
+div{
+    color: khaki;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    background: aliceblue url("i.jpg") no-repeat  ;
+    background-attachment: scroll;
+    background-attachment: fixed;
+    
+}

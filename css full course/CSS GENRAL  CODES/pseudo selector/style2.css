@@ -1,0 +1,9 @@
+p{
+    color: blue/* !important because this apply ll*/;
+}
+#box p {
+    color: rgb(255, 0, 0);
+}
+.test{
+    color: blue !important;
+}

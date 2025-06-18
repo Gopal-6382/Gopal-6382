@@ -1,0 +1,55 @@
+/* this is select the two div
+.box p{
+color: red;
+}
+this select the that div para
+.box +p{
+    color: blue;
+}
+.box  p{
+    color: green;
+}
+    div[class]{
+        background-color: aqua;
+    }
+    this also select all div 
+   div[id]{
+    color: burlywood;
+   }
+    using this select any one 
+div[class="inner"] {
+    background: blue;
+
+}
+.txt {
+    color: rgb(0, 255, 102);
+}
+div[class~="inner"] {
+    background: blue;
+
+}
+but using the ~ symbol apply two
+.txt {
+    color: rgb(0, 255, 102);
+}
+    these select the link tags
+a[title="link1"] {
+    color: gray;
+}
+these select the href
+a[href="test.png"]{
+    color: aqua;
+}
+    */
+/*this special tags select when start with test apply that color for achive this we can 
+    use ^ SYMBOL
+a[href^="test"]{
+    color: aqua;
+}
+*/
+/* this selector select whe the end name like gopal-# 
+achive using $ symbol
+
+a[href$="#"]{
+    color: aqua;
+}*/

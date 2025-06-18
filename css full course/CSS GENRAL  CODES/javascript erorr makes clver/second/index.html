@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input id="guessnumber" type="number" min="1" max="10">
+<button onclick="check()">check</button>
+<p id="result">right or wright</p>
+<p id="score">score:10</p>
+
+    <script>
+var guessnumber=document.getElementById("guessnumber");
+var result=document.getElementById("result");
+var score=document.getElementById("score");
+var randomNumber=Math.floor(Math.random()*10)+1;
+var totalscore=10;
+function check(){
+    var enterNumber=parseInt(guessnumber.value);
+    if(randomNumber === enterNumber){
+    console.log("Right");
+    result.textContent="right";
+    alert("YOU WON");
+}
+else{
+totalscore -= 1;
+score.textContent="score:"+totalscore;
+result.textContent="Wrong";
+}
+}
+    </script>
+</body>
+</html>

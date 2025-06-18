@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /*descendant selector (space)
+div p {
+  color: yellow;
+}
+div  section p{
+    color: aqua;
+}
+div  section p span{
+    color: rgb(255, 0, 0);
+}
+body h2{
+    color: green;
+}*/
+div > p {
+  color: yellow;
+}
+div  section p{
+    color: rgb(255, 98, 0);
+}
+div + p {
+  color: rgb(0, 255, 106);
+}
+div ~ p {
+  color: rgb(119, 0, 255);
+}
+
+
+/*descendant selector (space) select that tag inside element
+child selector (>) that select direct child
+adjacent sibling selector (+) this select next one tag
+general sibling selector (~) this select next all tag*/ 
+</style>
+</head>
+<body>
+
+<h2>Descendant Selector</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div>
+  <p>direct child.</p>
+  <p>direct child.</p>
+  <section><p>Paragraph<span>3</span>  in the div.</p></section>
+</div>
+
+<p>adjacent sibling.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+</body>
+</html>

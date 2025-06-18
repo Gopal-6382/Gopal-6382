@@ -1,0 +1,11 @@
+div{
+    width: 800px ;
+    height: 400px;
+    background-image: url("IMG_20231112_200212.jpg");
+    background-size: cover;
+    font-family: impact ;
+    font-size: 100px;
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    }

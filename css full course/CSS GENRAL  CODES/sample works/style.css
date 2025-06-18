@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.h {
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    color: rgb(252, 252, 252);
+    font-size: larger;
+    background-color: rgb(0, 0, 0);
+  padding: 15px;
+}
+.h1 {
+    color: blue; 
+}
+.h2 {
+    color: blue;
+}
+.h3 {
+    color: blue;
+}
+.h4 {
+    color: blue;
+}
+.h5 {
+    color: blue;
+}
+.h6{
+  border: 2px solid brown;
+  width: 250px;
+}
+.h:hover{
+    cursor: pointer;
+    background-color: rgb(254, 191, 191);
+    
+}
+.h1:hover,.h2:hover,.h3:hover,.h4:hover,.h5:hover{
+    color: brown;
+transition:ease-in-out;
+}

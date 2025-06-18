@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table{
+            border-collapse: collapse;
+
+        }
+        table tr:nth-of-type(even){
+            background-color: greenyellow;
+        }
+        table td:nth-of-type(even){
+            background-color: rgb(255, 0, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1> table in css</h1>
+    <table width="50%" border="5px" cellpadding="16px" cellspacing="50px">
+        <caption>student details</caption>
+        <colgroup>
+            <col style="width: 150px;">
+            <col style="width: 50px;">
+            <col style="width: 150px;">
+
+
+
+        </colgroup>
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE </th>
+                <th>CITY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>RAM</td>
+                <td>12</td>
+                <td>NAMAKKAL</td>
+            </tr>
+            <tr>
+                <td>RAM</td>
+                <td>12</td>
+                <td>NAMAKKAL</td>
+            </tr>
+            <tr>
+                <td>RAM</td>
+                <td>12</td>
+                <td>NAMAKKAL</td>
+            </tr>
+            <tr>
+                <td>RAM</td>
+                <td>12</td>
+                <td>NAMAKKAL</td>
+            </tr>
+
+            <tr>
+                <td colspan="3">
+                    gopal
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

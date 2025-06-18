@@ -1,0 +1,14 @@
+body{
+    background: rgb(139, 201, 255);
+}
+div{
+    background-color: rgb(255, 0, 0);
+    width: 800px;
+    height:600px;
+    padding: 25px;
+    background-origin:border-box;
+    background-repeat: no-repeat;
+    border: 20px dashed black;
+background-image: url("i.jpg");    
+background-origin: padding-box;  
+}

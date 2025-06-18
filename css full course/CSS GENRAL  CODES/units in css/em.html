@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html{
+			font-size: 15px;
+			/*
+			the em work parent that parent not alive 
+			it's work based on root element.
+			but the rem only work for root element */
+		}
+		.parent {
+			font-size: 25px;
+			/*parent 25px*2.5em = 62.5 */
+		}
+
+		.relative {
+
+			font-size: 2rem;
+			/*rem is work with root value
+			that means its take html or body 
+			tag value*/
+			
+			/*4*16=64px its work browser base size
+			 while changing the font value
+			 it can be change*/
+		}
+
+		.absolute {
+			font-size: 32px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="parent">
+		<h3 class="relative">krishnan-r</h3>
+	</div>
+	<h3 class="absolute">krishnan-a</h3>
+</body>
+
+</html>

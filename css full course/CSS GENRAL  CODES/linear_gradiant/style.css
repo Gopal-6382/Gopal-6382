@@ -1,0 +1,36 @@
+div {
+    height: 600px;
+    width: 800px;
+    /*  background-color: red;
+    background: linear-gradient(red, blue);
+    background: linear-gradient(to right red, yellow, orange);
+    background: linear-gradient(to right, blue, yellow);
+    background: linear-gradient(to left, blue, yellow);
+    background: linear-gradient(to top, blue, yellow);
+    background: linear-gradient(to left, blue, green);
+    background: linear-gradient(to bottom right, green, yellow, rgb(51, 0, 128));
+    background: linear-gradient(to bottom left, green, yellow, rgb(51, 0, 128));
+    background: linear-gradient(to top right, green, yellow, rgb(51, 0, 128));
+    background: linear-gradient(to top left, green, yellow, rgb(51, 0, 128));
+    background: linear-gradient(60deg,red,blue);
+    background: linear-gradient(-45deg,blue,rgb(25, 214, 25));
+    background:repeating-linear-gradient(red,blue,40% ,green);
+    border-radius: 50%;
+    background: radial-gradient(red, blue);
+    background: radial-gradient(red 5%, blue 15%, green 70%);
+    background: radial-gradient(closest-side at 80% 50%, red, yellow, green);
+    background: radial-gradient(closest-side at 50% 50%, red, yellow, green);
+    background: radial-gradient(farthest-side at 80% 20%, red, yellow, green);
+    background: radial-gradient(closest-corner at 10% 10%,red,yellow,green);
+    background: radial-gradient(closest-corner at 10% 10%,red,yellow,green);
+    background: radial-gradient(farthest-corner at 10% 10%,red,yellow,green);
+    background:repeating-radial-gradient(red,blue,green ,yellow );
+    background-image: conic-gradient(red,blue,green);
+    border-radius: 50%;
+    background-image: conic-gradient(from 90deg,red,blue,green);
+    background-image: conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg,green 270deg,blue 270deg);
+    border-radius: 50% 50%;
+    background-image: conic-gradient(at 60% 45%, red, yellow,green) ;*/
+    background-image: repeating-conic-gradient( red 9%, yellow 20%) ;
+    border-radius: 50%;
+}

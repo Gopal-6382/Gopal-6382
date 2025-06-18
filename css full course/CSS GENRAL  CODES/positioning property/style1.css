@@ -1,0 +1,61 @@
+/* absolute  you can set the position absolute if give any left right top bottom value its can be start from hole html also you will set relative the element locate in container that take devalut value to that container
+static staic is a default value no change occur
+fixed
+relative LRTB its can be move any where also override like z index is high
+sticky
+*/
+
+/* position absloute and relative combined use for 
+when you set the parent relative child value is absolute 
+its consider the relative is that parent so
+on move inside the box*/
+
+/*position: relative;
+  left: 25px;
+  top: 40px;*/
+    /*  position: absolute; its consider the parent is html LRTB RELATIVE  display: none;
+      right: 0;
+      left: 0;
+      top: 0; if any confuse check again*/
+
+      /* positon fixed also like absolute but the difference
+      is fixed can't the in side parent only used
+      for where you placed in the body tag*/
+    
+div{
+    height: 10000px;
+    width: 200px;
+    background: blue;
+}
+
+.main {
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+    background: gray;
+    padding: 50px;
+    
+}
+.box-1 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background: red;
+    margin: 20px 0px 20px 20px;
+   
+}
+.box-2 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background: blue;
+    margin: 20px 0px 20px 20px;
+ 
+}
+.box-3 {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background: green;
+    margin: 20px 0px 20px 20px;
+}

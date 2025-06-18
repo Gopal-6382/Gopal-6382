@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .item-1 {
+            background-color: slateblue;
+        }
+
+        .item-2 {
+            background-color: blue;
+        }
+
+        .item-3 {
+            background-color: green;
+        }
+
+        .item-4 {
+            background-color: yellow;
+        }
+
+        .item-5 {
+            background-color: orange;
+        }
+
+        .item-6 {
+            background-color: rosybrown;
+        }
+
+        .item-7 {
+            background-color: brown;
+        }
+
+        .item-8 {
+            background-color: slategray;
+        }
+
+        .item-9 {
+            background-color: skyblue;
+        }
+        
+        .container {
+            border: 5px solid black;
+
+        }
+
+        .flex-item {
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            padding: 16px;
+            text-align: center;
+        }
+
+       
+
+        /*--------------------------------*/
+
+        /*
+            display: inline-flex; 
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            flex-wrap: wrap-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            ----------------------------
+            flex-direction: column;
+            height: 300px;
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+            -------------------------------
+            display: flex;
+            flex-flow: row nowrap;
+            flex-flow:  row-reverse wrap-reverse;
+            flex-flow: column wrap-reverse;
+            height: 400px;
+            -------------------------------------
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 20px;
+            gap: 30px;
+            gap: 30px 20px;
+            --------------------------------
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content:  space-between;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content:  space-evenly;
+            --------------------------
+            flex-direction: column;==
+            height: 600px;==
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content:  space-between;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content=> Main axis alignment
+            row main axis =>X
+            column main axis=> Y
+            align item y axis
+            justify content x axis
+            -----------------------------
+             .container{
+              align-items: baseline;
+              }
+            .item-1{
+            font-size: 70px;
+        }
+            ------------------
+            
+        .container {
+            display: flex;
+         flex-direction: row;
+         height: 600px;
+         align-items: stretch;
+         align-items: flex-start;
+         align-items: flex-end;
+         align-items: center;
+          display: flex;
+            flex-direction: column;
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+        */
+        .container {
+           
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="flex-item item-1">box-1</div>
+        <div class="flex-item item-2">box-2</div>
+        <div class="flex-item item-3">box-3</div>
+        <div class="flex-item item-4">box-4</div>
+        <!--  <div class="flex-item item-5">box-5</div>
+        <div class="flex-item item-6">box-6</div>
+        <div class="flex-item item-7">box-7</div>
+        <div class="flex-item item-8">box-8</div>
+        <div class="flex-item item-9">box-9</div>-->
+    </div>
+</body>
+
+</html>

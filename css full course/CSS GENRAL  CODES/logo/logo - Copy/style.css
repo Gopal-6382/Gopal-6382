@@ -1,0 +1,95 @@
+*{
+    font-style: italic;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background: #414A4F;
+}
+.logo{
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: bold;
+}
+.nav-link{
+list-style: none;
+display: flex;
+}
+.nav-link li a{
+    color: aliceblue;
+    text-decoration: none;
+    padding-left: 15px;
+    transform: 0.3s;
+}
+.nav-link li a:hover{
+    color: teal;
+}
+button{
+    padding: 9px 25px;
+    background: teal;
+    border-radius: 50px;
+    border: none;
+    transform: 0.3s;
+}
+button:hover{
+    background: teal;
+    opacity: 0.6;
+}
+.btn{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    width: 30px;
+    border-radius: 50px;
+}
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    
+}
+
+@media (max-width:600px){
+    .btn{
+        display: flex;
+    }
+    .nav-link{
+        align-items: flex-start;
+    }
+    button{
+        display: none;
+    }
+header{
+    flex-direction: column;
+   align-items: flex-start;
+   
+ 
+}
+ .nav-link{
+    flex-direction: column;
+    display: none;
+    
+ 
+ }
+ .nav-link li {
+  padding: 20px 0 20px 170px;
+  
+ }
+ .nav-link li a{
+  text-align: center;
+ 
+}
+ .nav-link .active{
+    display: flex;
+ }
+
+}

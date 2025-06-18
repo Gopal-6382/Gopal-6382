@@ -1,0 +1,42 @@
+/*body {
+    background: teal;
+    color: aliceblue;
+    background-image: url("D:\css full course\bg properties\IMG_20240630_091735.jpg");
+    background-size: 800px 400px;
+    background-position: bottom center;
+    height: 800px;
+    background-size: cover;
+}*/
+
+div{
+background-color: teal;
+width:900px;
+height: 500px;
+padding: 10px;
+background: teal url("IMG_20240630_091735.jpg");
+background-size: 400px 200px;
+background-repeat: no-repeat;
+opacity: 0.7;
+background-size: 100%;
+background-size: contain;
+background-size: cover;
+overflow: scroll;
+}
+
+ html{
+    font-family: italic;
+    font-weight: normal;
+    font-variant: small-caps;
+    color: rgb(195, 227, 17);
+    
+}
+
+p {
+    font-style: italic;
+    font-size: 25px;
+  
+}
+
+span {
+    font: bold 12pt Arial;
+}

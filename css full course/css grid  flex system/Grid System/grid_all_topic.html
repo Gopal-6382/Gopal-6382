@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: aquamarine;
+        }
+
+        .container {
+            border: solid rgb(0, 101, 54) 2px;
+            margin: 20px;
+        }
+
+        .grid-item {
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .box-1 {
+            background-color: blue;
+        }
+
+        .box-2 {
+            background-color: orange;
+        }
+
+        .box-3 {
+            background-color: violet;
+        }
+
+        .box-4 {
+            background-color: yellow;
+        }
+
+        .box-5 {
+            background-color: green;
+        }
+
+        .box-6 {
+            background-color: gray;
+        }
+
+        .box-7 {
+            background-color: brown;
+        }
+
+        .box-8 {
+            background-color: skyblue;
+        }
+
+        .box-9 {
+            background-color: salmon;
+        }
+
+        /*         
+            display: inline-grid;
+            grid-template-columns: 100px 200px 300px 50px 20px 80px;
+            grid-template-columns: 100px 200px 300px;
+            grid-template-rows: 60px 70px 80px;
+            grid-template-columns: repeat(3, 200px) 300px;
+            grid-template-columns: 1fr 2fr 3fr 6fr 1fr;
+            grid-template-columns: repeat(3, minmax(200px, 2fr));
+            grid-template-rows: 100px 150px 200px;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template: repeat(3, 1fr)/repeat(4, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+            gap: 40px 20px;
+            gap: 30px;
+            */
+        .container {
+
+            /* 
+            display: grid;
+            grid-template: repeat(3, 200px)/repeat(3, 200px);
+            height: 400px;*/
+            /*
+            justify-items: stretch;
+            justify-items: center;
+            justify-items: end;
+            justify-items: start;
+            */
+            /*---------------------------------*/
+            /*
+            align-items: stretch;
+            align-items: start;
+            align-items: end;
+            align-items: center;
+            */
+            /*-------------------------------*/
+            /*
+            place-items: end start;
+            place-items: start end;
+            place-items: end;
+            */
+            /*------------------------------*/
+            /*justify-content: start;
+            justify-content: end;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;*/
+            /*------------------------------*/
+            /* align-content: space-evenly;
+            align-content: space-around;
+            align-content: end;
+            align-content: start;
+            align-content: space-between;
+            */
+            /*----------------------------------*/
+            /*
+            place-content: start end;
+            place-content: start center;
+            place-content: end center;
+            place-content:  center;
+            */
+            /*--------------------------------*/
+            /*
+            grid-auto-flow: row;
+            grid-template-rows: 100px;
+
+            grid-auto-flow: column;
+            grid-template-column: 100px;
+            */
+
+        }
+
+        .container {
+            display: grid;
+            grid-template: repeat(3, 200px)/repeat(3, 200px);
+        }
+
+        .box-1 {
+            /*
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-column-end:span 3;
+            grid-column: 1 / span 2;
+            */
+            /*--------------------*/
+           /*
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-row-end: span 2;
+            grid-row: 1/ span 3;
+         .box-2{
+            grid-row: 1/ span 2;
+            grid-column: 1 / span 2; 
+                }
+            */
+        }
+       .box-2{
+        justify-self: stretch;
+        justify-self: start;
+        justify-self: end;
+        justify-self: center;
+        align-self: stretch;
+        align-self: start;
+        align-self: end;
+        align-self: center;
+       }
+       .box-5{
+        place-self: center;
+       }
+       .box-8{
+        place-self: start center;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="grid-item box-1">box-1</div>
+        <div class="grid-item box-2">box-2</div>
+        <div class="grid-item box-3">box-3</div>
+        <div class="grid-item box-4">box-4</div>
+        <div class="grid-item box-5">box-5</div>
+        <div class="grid-item box-6">box-6</div>
+        <div class="grid-item box-7">box-7</div>
+        <div class="grid-item box-8">box-8</div>
+        <div class="grid-item box-9">box-9</div>
+    </div>
+</body>
+
+</html>

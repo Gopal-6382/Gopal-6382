@@ -1,0 +1,7 @@
+align-item
+take full row centre
+align-content
+give each value sperate
+basically  both are same
+but items are cover all
+content are cover sperate row & column 

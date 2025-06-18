@@ -1,0 +1,33 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8, 8, 48);
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(192, 113, 23);
+    width: 0ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s infinite;
+
+}
+
+@keyframes typing {
+    
+ 80% {
+        width: 20ch;
+    }
+}
