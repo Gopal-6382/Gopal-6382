@@ -11,7 +11,7 @@ export const Table = () => {
   });
 
   const [hobbyState, setHobbyState] = useState({
-    reading: true,
+    reading: false,
     gaming: true,
     coding: true,
   });
@@ -20,9 +20,9 @@ export const Table = () => {
 
   const handleInputChange = (e) => {
     const { name, type, value, checked } = e.target;
-    const newValue = type === "checkbox" ? checked : value;
-    //
+    const newValue = type === "checkbox" ? checked : whatuse_this_will_be_why_not_show_Error;
 
+    console.log(e.target);
     console.log("🟢 INPUT CHANGED:");
     console.log("Type:", type);
     console.log("Name:", name);
