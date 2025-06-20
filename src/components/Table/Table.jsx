@@ -15,12 +15,13 @@ export const Table = () => {
     gaming: true,
     coding: true,
   });
+
   console.log("📦 Current User State:", user);
   console.log("🎮 Hobby State:", hobbyState);
 
   const handleInputChange = (e) => {
     const { name, type, value, checked } = e.target;
-    const newValue = type === "checkbox" ? checked : whatuse_this_will_be_why_not_show_Error;
+    const newValue = type === "checkbox" ? checked : value;
 
     console.log(e.target);
     console.log("🟢 INPUT CHANGED:");

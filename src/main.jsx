@@ -68,9 +68,17 @@ import ReactDOM from "react-dom/client";
 //   </React.StrictMode>
 // );
 
-import { Table } from "./components/Table/Table";
+// import { Table } from "./components/Table/Table";
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <Table />
+//   </React.StrictMode>
+// );
+
+
+import { Advice } from './components/AdviceApp.jxs/Advice';
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Table />
+    <Advice />
   </React.StrictMode>
 );
