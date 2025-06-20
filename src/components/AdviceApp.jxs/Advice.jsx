@@ -21,7 +21,7 @@ export const Advice = () => {
       setLoading(false);
     }
   };
-
+//for initial calling when automaticall the adivce
   useEffect(() => {
     fetchAdvice();
   }, []);

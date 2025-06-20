@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 // {
 //   /*import React from "react";
 // import ReactDOM from "react-dom/client";
@@ -45,8 +47,7 @@
 //     <Qr_code />
 //   </React.StrictMode>
 // );
-import React from "react";
-import ReactDOM from "react-dom/client";
+
 // import { UseState } from "./components/UseState/UseState";
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
@@ -76,9 +77,15 @@ import ReactDOM from "react-dom/client";
 // );
 
 
-import { Advice } from './components/AdviceApp.jxs/Advice';
+// import { Advice } from './components/AdviceApp.jxs/Advice';
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <Advice />
+//   </React.StrictMode>
+// );
+
+import WeatherApp from './components/WeatherApp/weatherApp';
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Advice />
-  </React.StrictMode>
+    <WeatherApp />
 );
