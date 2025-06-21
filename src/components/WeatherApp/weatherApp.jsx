@@ -145,9 +145,7 @@ const WeatherApp = () => {
         </div>
       </div>
 
-      {error ? (
-        <div className="error">{error}</div>
-      ) : (
+      {error ? ( <div className="error">{error}</div>  ) : (
         <WeatherDetails
           lat={lat}
           long={long}
