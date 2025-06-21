@@ -77,15 +77,15 @@ import ReactDOM from "react-dom/client";
 // );
 
 
-// import { Advice } from './components/AdviceApp.jxs/Advice';
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <Advice />
-//   </React.StrictMode>
-// );
-
-import WeatherApp from './components/WeatherApp/weatherApp';
-
+import { Advice } from './components/AdviceApp.jxs/Advice';
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <WeatherApp />
+  <React.StrictMode>
+    <Advice />
+  </React.StrictMode>
 );
+
+// import WeatherApp from './components/WeatherApp/weatherApp';
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//     <WeatherApp />
+// );

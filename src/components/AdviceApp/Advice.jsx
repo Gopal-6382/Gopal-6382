@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../../sass/advice.scss";
 
 export const Advice = () => {
@@ -13,9 +13,11 @@ export const Advice = () => {
         `https://api.adviceslip.com/advice?${Math.random()}`
       );
       const data = await res.json();
-      setAdviceData(data.slip); // holds { id, advice }
+      setAdviceData(data.slip);
+      console.log("Advice fetched:", data.slip);
+      // holds { id, advice }
       setCount((prev) => prev + 1);
-      console.log("Advice fetch count:", count + 1);
+      //console.log("Advice fetch count:", count + 1);
     } catch (error) {
       console.error("Error fetching advice:", error);
       setAdviceData({ id: "-", advice: "Something went wrong." });
@@ -36,7 +38,7 @@ export const Advice = () => {
           : `ID: ${adviceData?.id} — "${adviceData?.advice}"`}
       </h1>
 
-      <button className="advice-btn" onClick={fetchAdvice} disabled={loading}>
+      <button className="advice-btn" onClick={fetchAdvice()} disabled={loading}>
         {loading ? "Loading..." : "Get New Advice"}
       </button>
 
