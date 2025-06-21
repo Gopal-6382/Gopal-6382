@@ -15,6 +15,7 @@ export const Advice = () => {
       const data = await res.json();
       setAdviceData(data.slip);
       console.log("Advice fetched:", data.slip);
+
       // holds { id, advice }
       setCount((prev) => prev + 1);
       //console.log("Advice fetch count:", count + 1);

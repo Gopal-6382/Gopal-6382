@@ -77,7 +77,7 @@ import ReactDOM from "react-dom/client";
 // );
 
 
-import { Advice } from './components/AdviceApp.jxs/Advice';
+import { Advice } from './components/AdviceApp/Advice';
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Advice />
