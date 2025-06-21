@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from "react";
 import "../../sass/advice.scss";
 
 export const Advice = () => {
@@ -9,10 +9,12 @@ export const Advice = () => {
   const fetchAdvice = async () => {
     try {
       setLoading(true);
-      const res = await fetch(`https://api.adviceslip.com/advice?${Math.random()}`);
+      const res = await fetch(
+        `https://api.adviceslip.com/advice?${Math.random()}`
+      );
       const data = await res.json();
       setAdviceData(data.slip); // holds { id, advice }
-      setCount(prev => prev + 1);
+      setCount((prev) => prev + 1);
       console.log("Advice fetch count:", count + 1);
     } catch (error) {
       console.error("Error fetching advice:", error);
@@ -21,7 +23,7 @@ export const Advice = () => {
       setLoading(false);
     }
   };
-//for initial calling when automaticall the adivce
+  //for initial calling when automaticall the adivce
   useEffect(() => {
     fetchAdvice();
   }, []);
@@ -39,7 +41,7 @@ export const Advice = () => {
       </button>
 
       <p className="fetch-count">
-        Advice fetched: {count} time{count !== 1 ? 's' : ''}
+        Advice fetched: {count} time{count !== 1 ? "s" : ""}
       </p>
     </div>
   );
