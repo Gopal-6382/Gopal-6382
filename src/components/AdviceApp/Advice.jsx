@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../../sass/advice.scss";
 
 export const Advice = () => {
   const [adviceData, setAdviceData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
+  const hasFetched = useRef(false); // prevent double fetch in dev
 
   const fetchAdvice = async () => {
     try {
@@ -13,22 +14,25 @@ export const Advice = () => {
         `https://api.adviceslip.com/advice?${Math.random()}`
       );
       const data = await res.json();
-      setAdviceData(data.slip);
-      console.log("Advice fetched:", data.slip);
 
-      // holds { id, advice }
-      setCount((prev) => prev + 1);
-      //console.log("Advice fetch count:", count + 1);
+      setTimeout(() => {
+        setAdviceData(data.slip);
+        setLoading(false);
+        setCount((prev) => prev + 1);
+        console.log("Advice fetched:", data.slip);
+      }, 100);
     } catch (error) {
       console.error("Error fetching advice:", error);
       setAdviceData({ id: "-", advice: "Something went wrong." });
-    } finally {
       setLoading(false);
     }
   };
-  //for initial calling when automaticall the adivce
+
   useEffect(() => {
-    fetchAdvice();
+    if (!hasFetched.current) {
+      hasFetched.current = true;
+      fetchAdvice();
+    }
   }, []);
 
   return (
@@ -39,7 +43,7 @@ export const Advice = () => {
           : `ID: ${adviceData?.id} — "${adviceData?.advice}"`}
       </h1>
 
-      <button className="advice-btn" onClick={fetchAdvice()} disabled={loading}>
+      <button className="advice-btn" onClick={fetchAdvice} disabled={loading}>
         {loading ? "Loading..." : "Get New Advice"}
       </button>
 
