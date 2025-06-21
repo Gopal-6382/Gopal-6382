@@ -1,6 +1,6 @@
 // src/components/WeatherApp/weatherApp.jsx
 
-import "../../sass/weatherApp.scss";
+// import "../../sass/weatherApp.scss";
 import { useState, useEffect, useRef } from "react";
 import humidityImg from "../../assets/humidity.png";
 import rain from "../../assets/rain.png";
@@ -10,7 +10,7 @@ import snow from "../../assets/snow.png";
 import windImg from "../../assets/wind.png";
 import cloud from "../../assets/cloud.png";
 import clear from "../../assets/clear.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const WeatherDetails = ({
   icon,

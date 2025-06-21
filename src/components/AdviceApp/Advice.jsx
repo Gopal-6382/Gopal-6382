@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "../../sass/advice.scss";
+// import "../../sass/advice.scss";
 
 export const Advice = () => {
   const [adviceData, setAdviceData] = useState(null);

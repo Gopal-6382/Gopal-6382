@@ -1,43 +1,60 @@
-import "./index.scss";
-import { Header, Header2 } from "./Header";
-import Props from "./props";
-import { ColorBox } from "./ColorBox";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Advice } from "./components/AdviceApp/Advice";
+import WeatherApp from "./components/WeatherApp/weatherApp";
+import { Currency } from "./components/currency/currency";
+import Qr_code from "./components/Qr_code/Qr_code";
+import { UseState } from "./components/UseState/UseState";
+import { FormData } from "./components/Form/FormData";
+import { Table } from "./components/Table/Table";
+import "./sass/all.scss"; // your global styles
 
-const App = () => {
-
-  
-  // Function to handle button click
-  const handleClick = () => {
-    alert("Button clicked!");
-  };
-
+export default function App() {
   return (
-    <div className="container mt-5 text-center">
-      <h1 className="text-primary">Hello, World!</h1>
-      <p className="lead">
-        This is a simple React + Bootstrap + Sass application.
-      </p>
-      <button className="btn btn-success" onClick={handleClick}>
-        Click Me
-      </button>
+    <div className="container my-5">
+      <h1 className="text-center text-primary mb-5">Utility Dashboard</h1>
+
+      <div className="row gy-4">
+        <ComponentCard title="Advice Generator" variant="success">
+          <Advice />
+        </ComponentCard>
+
+        <ComponentCard title="Weather App" variant="info">
+          <WeatherApp />
+        </ComponentCard>
+
+        <ComponentCard title="Currency Converter" variant="warning">
+          <Currency />
+        </ComponentCard>
+
+        <ComponentCard title="QR Code Generator" variant="secondary">
+          <Qr_code />
+        </ComponentCard>
+
+        <ComponentCard title="UseState Example" variant="dark">
+          <UseState />
+        </ComponentCard>
+
+        <ComponentCard title="Form Handling" variant="primary">
+          <FormData />
+        </ComponentCard>
+
+        <ComponentCard title="Data Table" variant="danger">
+          <Table />
+        </ComponentCard>
+      </div>
     </div>
   );
-};
+}
 
-const App5 = () => {
+// Simple reusable wrapper for layout
+function ComponentCard({ title, children, variant = "secondary" }) {
   return (
-    <div className="container mt-5">
-      <h2>ColorBox Example</h2>
-      <ColorBox color="red" />
-      <ColorBox color="blue" />
-      <ColorBox color="yellow" />
-      {/* <ColorBox color="yellow" />  <-- This will show a warning in console! */}
+    <div className="col-12 col-md-6">
+      <div className={`p-4 shadow-sm rounded bg-white border-start border-4 border-${variant} h-100`}>
+        <h4 className={`text-${variant} mb-3`}>{title}</h4>
+        {children}
+      </div>
     </div>
   );
-};
-
-const App2 = () => <Header />;
-const App3 = () => <Header2 />;
-const App4 = () => <Props />;
-
-export { App, App2, App3, App4 ,App5};
+}

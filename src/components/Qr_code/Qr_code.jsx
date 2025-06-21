@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import QRCode from "react-qr-code";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 const Qr_code = () => {
   const [url, setUrl] = useState("");
