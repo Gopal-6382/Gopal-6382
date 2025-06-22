@@ -6,6 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+# Ignore all .css files
+*.css
+
+# Ignore all .map files (like source maps)
+*.map
 
 node_modules
 dist
