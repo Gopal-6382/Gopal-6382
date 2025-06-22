@@ -1,0 +1,37 @@
+.advice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+}
+
+.advice-text {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.advice-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.advice-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+
+.advice-btn:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}

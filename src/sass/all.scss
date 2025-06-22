@@ -284,9 +284,9 @@
 @use "bootstrap" as *;
 
 // Use only @import OR @use. If using old Sass (Dart Sass supports it still), do this:
-@import "advice";
-@import "weatherApp";
-@import "index";
+@use "advice";
+@use "weatherApp";
+@use "index";
 
 // Optional global styles
 body {
