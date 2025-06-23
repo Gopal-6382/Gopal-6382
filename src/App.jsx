@@ -1,12 +1,30 @@
-import React from 'react'
-import CurrencyConverter from './components/currency.jsx';
-import BMICalculator from './components/Bmi.jsx';
-export const App = () => {
-  return (<>
-     {/* <CurrencyConverter />  */}
-    {/*  <BMICalculator /> */}
+import React from "react";
+import DigitalClock from "./components/Cloack";
+import {PasswordGenerator} from "./components/Strong_Password_generator";
+export default function App() {
+  return (
+    <>
+      {/* <div style={styles.container}>
+      <h1 style={styles.heading}>React Digital Clock</h1>
+      <DigitalClock />
+    </div> */}
+
+    <PasswordGenerator />
+
     </>
-  )
+  );
 }
 
-export default App;
+// Styles
+// const styles = {
+//   container: {
+//     textAlign: "center",
+//     padding: "3rem",
+//     backgroundColor: "#f0f0f0",
+//     height: "100vh",
+//     fontFamily: "Arial, sans-serif",
+//   },
+//   heading: {
+//     marginBottom: "2rem",
+//   },
+// };
