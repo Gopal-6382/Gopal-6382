@@ -1,6 +1,9 @@
 import React from "react";
 import DigitalClock from "./components/Cloack";
-import {PasswordGenerator} from "./components/Strong_Password_generator";
+import { PasswordGenerator } from "./components/Strong_Password_generator";
+import Calendar from "./components/calander.jsx";
+import AxiosDemo from "./components/axios.jsx";
+
 export default function App() {
   return (
     <>
@@ -8,9 +11,9 @@ export default function App() {
       <h1 style={styles.heading}>React Digital Clock</h1>
       <DigitalClock />
     </div> */}
-
-    <PasswordGenerator />
-
+      {/* <Calendar /> */}
+      <AxiosDemo/>
+      {/* <PasswordGenerator /> */}
     </>
   );
 }

@@ -93,7 +93,8 @@ export default function PasswordGenerator() {
         <input
           type="text"
           value={password}
-          readOnly
+          readOnly 
+         
           style={styles.passwordInput}
         />
         <button onClick={copyToClipboard} style={styles.copyButton}>
@@ -103,6 +104,8 @@ export default function PasswordGenerator() {
     </div>
   );
 }
+
+
 
 const styles = {
   container: {
