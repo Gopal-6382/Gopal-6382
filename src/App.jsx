@@ -3,7 +3,7 @@ import DigitalClock from "./components/Cloack";
 import { PasswordGenerator } from "./components/Strong_Password_generator";
 import Calendar from "./components/calander.jsx";
 import AxiosDemo from "./components/axios.jsx";
-
+import Question from "./components/question.jsx";
 export default function App() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function App() {
       {/* <Calendar /> */}
       <AxiosDemo/>
       {/* <PasswordGenerator /> */}
+      {/* <Question/> */}
     </>
   );
 }

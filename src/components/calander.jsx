@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import dayjs from "dayjs";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const sampleEvents = {
   "2025-06-24": [{ title: "Doctor Appointment" }],
   "2025-06-28": [{ title: "Team Meeting" }],
-};
+};         
 
 const App = () => {
   const today = dayjs();

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-// Create custom Axios instance
+// ✅ Correct base URL
 const api = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
   headers: {
@@ -14,71 +14,97 @@ const AxiosDemo = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // 🟢 1. GET request with params
+  // ✅ GET
   const fetchData = async () => {
     setLoading(true);
     try {
       const res = await api.get("/posts", {
-        params: { _limit: 5 }, // same as ?_limit=5
+        params: { _limit: 5, _sort: "id", _order: "desc" },
       });
+      console.log("🔄 Fetched Data:", res.data);
       setData(res.data);
+      setError(null);
     } catch (err) {
+      console.error("❌ Fetch error:", err.message);
       setError(err.message);
     } finally {
       setLoading(false);
     }
   };
 
-  // 🟢 2. POST request
+  // ✅ POST
   const createPost = async () => {
     try {
       const res = await api.post("/posts", {
-        title: "New Post",
-        body: "This is the body of the post",
+        title: "Sample Post " + Math.floor(Math.random() * 1000),
+        body: "This is a sample post body",
         userId: 1,
       });
+      console.log("🟢 Created Post:", res.data);
+      const updated = [res.data, ...data];
+      setData(updated);
+      console.log("📦 Data After Create:", updated);
       alert("Post Created: ID " + res.data.id);
     } catch (err) {
-      alert("Error creating post"+err);
+      console.error("❌ Create error:", err.message);
+      alert("Error creating post: " + err.message);
     }
   };
 
-  // 🟢 3. PUT request
+  // ✅ PUT
   const updatePost = async (id) => {
+    const original = data.find((item) => item.id === id);
     try {
       const res = await api.put(`/posts/${id}`, {
-        title: "Updated Title",
+        ...original,
+        title: "Updated Title - " + id,
       });
+      console.log("✏️ Before Update:", original);
+      console.log("🟢 Updated Post:", res.data);
+
+      const updated = data.map((item) =>
+        item.id === id ? res.data : item
+      );
+      setData(updated);
+      console.log("📦 Data After Update:", updated);
       alert("Post Updated: " + res.data.title);
     } catch (err) {
-      alert("Error updating post"+err);
+      console.error("❌ Update error:", err.message);
+      alert("Error updating post: " + err.message);
     }
   };
 
-  // 🟢 4. DELETE request
+  // ✅ DELETE
   const deletePost = async (id) => {
+    const deleted = data.find((item) => item.id === id);
     try {
       await api.delete(`/posts/${id}`);
+      console.log("🗑️ Deleted Post:", deleted);
+
+      const updated = data.filter((item) => item.id !== id);
+      setData(updated);
+      console.log("📦 Data After Delete:", updated);
       alert("Post Deleted");
     } catch (err) {
-      alert("Error deleting post"+err);
+      console.error("❌ Delete error:", err.message);
+      alert("Error deleting post: " + err.message);
     }
   };
 
-  // 🟢 5. Interceptor example (log all requests)
+  // Interceptors
   useEffect(() => {
-    const requestLogger = api.interceptors.request.use((config) => {
+    const reqLogger = api.interceptors.request.use((config) => {
       console.log("📡 Request:", config.method?.toUpperCase(), config.url);
       return config;
     });
-    const responseLogger = api.interceptors.response.use((res) => {
+    const resLogger = api.interceptors.response.use((res) => {
       console.log("📥 Response:", res.status, res.config.url);
       return res;
     });
 
     return () => {
-      api.interceptors.request.eject(requestLogger);
-      api.interceptors.response.eject(responseLogger);
+      api.interceptors.request.eject(reqLogger);
+      api.interceptors.response.eject(resLogger);
     };
   }, []);
 
@@ -88,7 +114,7 @@ const AxiosDemo = () => {
 
   return (
     <div className="p-6 max-w-xl mx-auto">
-      <h2 className="text-2xl font-bold mb-4">🚀 Axios Demo</h2>
+      <h2 className="text-2xl font-bold mb-4">🚀 Axios CRUD + Logs</h2>
 
       {loading ? (
         <p>Loading...</p>
@@ -117,10 +143,16 @@ const AxiosDemo = () => {
       )}
 
       <div className="mt-6 space-x-4">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded" onClick={createPost}>
+        <button
+          className="bg-blue-600 text-white px-4 py-2 rounded"
+          onClick={createPost}
+        >
           ➕ Create Post
         </button>
-        <button className="bg-gray-600 text-white px-4 py-2 rounded" onClick={fetchData}>
+        <button
+          className="bg-gray-600 text-white px-4 py-2 rounded"
+          onClick={fetchData}
+        >
           🔄 Refresh
         </button>
       </div>
