@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JS for Accordion
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-const questionBank = Array.from({ length: 20 }).map((_, i) => ({
-  id: i + 1,
-  question: `What is ${i + 2} + ${i + 3}?`,
-  options: [`${i}`, `${i + 3}`, `${i + 5}`, `${i + 6}`],
-  correct: 2,
-  explanation: `Because ${i + 2} + ${i + 3} = ${i + 5}`,
-}));
+// Dynamically generate questions
+const questionBank = Array.from({ length: 20 }).map((_, i) => {
+  const num1 = i + 2;
+  const num2 = i + 3;
+  const correctAnswer = num1 + num2;
+  const options = [`${i}`, `${i + 3}`, `${correctAnswer}`, `${i + 6}`];
+
+  return {
+    id: i + 1,
+    question: `What is ${num1} + ${num2}?`,
+    options,
+    correct: options.indexOf(String(correctAnswer)),
+    explanation: `Because ${num1} + ${num2} = ${correctAnswer}`,
+  };
+});
 
 const Question = () => {
   const [answers, setAnswers] = useState({});
@@ -17,13 +25,17 @@ const Question = () => {
   const [time, setTime] = useState(0);
   const [openAccordions, setOpenAccordions] = useState({});
 
+  // Timer
   useEffect(() => {
     const interval = setInterval(() => setTime((t) => t + 1), 1000);
     return () => clearInterval(interval);
   }, []);
 
   const formatTime = (t) =>
-    `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(t % 60).padStart(2, "0")}`;
+    `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(t % 60).padStart(
+      2,
+      "0"
+    )}`;
 
   const handleOptionClick = (qid, idx) => {
     if (!submitted) {
@@ -69,7 +81,10 @@ const Question = () => {
               {q.options.map((opt, idx) => (
                 <button
                   key={idx}
-                  className={`btn btn-${getButtonClass(q.id, idx)} mb-2 w-100 text-start`}
+                  className={`btn btn-${getButtonClass(
+                    q.id,
+                    idx
+                  )} mb-2 w-100 text-start`}
                   onClick={() => handleOptionClick(q.id, idx)}
                   disabled={submitted}
                 >
@@ -84,7 +99,9 @@ const Question = () => {
                       <button
                         className={`accordion-button ${
                           openAccordions[q.id] ? "" : "collapsed"
-                        } ${isCorrect ? "bg-success text-white" : "bg-warning"}`}
+                        } ${
+                          isCorrect ? "bg-success text-white" : "bg-warning"
+                        }`}
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse${q.id}`}
@@ -107,7 +124,8 @@ const Question = () => {
                           {q.options[selected] || "Not Answered"}
                         </p>
                         <p>
-                          <strong>Correct Answer:</strong> {q.options[q.correct]}
+                          <strong>Correct Answer:</strong>{" "}
+                          {q.options[q.correct]}
                         </p>
                         <p>
                           <strong>Explanation:</strong> {q.explanation}
@@ -122,19 +140,20 @@ const Question = () => {
         );
       })}
 
-      {!submitted ? (
-        <div className="text-center">
+      <div className="text-center">
+        {!submitted ? (
           <button className="btn btn-success" onClick={handleSubmit}>
             ✅ Submit All Answers
           </button>
-        </div>
-      ) : (
-        <div className="text-center">
-          <button className="btn btn-primary" onClick={() => setShowModal(true)}>
+        ) : (
+          <button
+            className="btn btn-primary"
+            onClick={() => setShowModal(true)}
+          >
             🔍 Review All Answers ({correctCount} / {questionBank.length})
           </button>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Modal */}
       {submitted && showModal && (
@@ -156,7 +175,8 @@ const Question = () => {
               </div>
               <div className="modal-body">
                 <p>
-                  ✅ You got <strong>{correctCount}</strong> out of {questionBank.length}
+                  ✅ You got <strong>{correctCount}</strong> out of{" "}
+                  {questionBank.length}
                 </p>
                 {questionBank.map((q) => (
                   <div key={q.id} className="mb-3">
