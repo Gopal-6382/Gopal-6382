@@ -1,9 +1,11 @@
 import React from "react";
 import DigitalClock from "./components/Cloack";
 import { PasswordGenerator } from "./components/Strong_Password_generator";
-import Calendar from "./components/calander.jsx";
+// import Calendar from "./components/calander.jsx";
 import AxiosDemo from "./components/axios.jsx";
 import Question from "./components/question.jsx";
+import UserListApp from "./components/usemom.jsx";
+import Calendar from "./components/calander/calander2.jsx";
 export default function App() {
   return (
     <>
@@ -12,10 +14,12 @@ export default function App() {
       <DigitalClock />
     </div> */}
       {/* <Calendar /> */}
-      <AxiosDemo/>
+      {/* <UserListApp /> */}
+      {/* <AxiosDemo/> */}
       {/* <PasswordGenerator /> */}
       {/* <Question/> */}
-    </>
+      <Calendar/>
+      </>
   );
 }
 
