@@ -26,8 +26,10 @@ const Question = () => {
     `${String(Math.floor(t / 60)).padStart(2, "0")}:${String(t % 60).padStart(2, "0")}`;
 
   const handleOptionClick = (qid, idx) => {
-    setAnswers((prev) => ({ ...prev, [qid]: idx }));
-    setOpenAccordions((prev) => ({ ...prev, [qid]: true }));
+    if (!submitted) {
+      setAnswers((prev) => ({ ...prev, [qid]: idx }));
+      setOpenAccordions((prev) => ({ ...prev, [qid]: true }));
+    }
   };
 
   const handleSubmit = () => setSubmitted(true);
