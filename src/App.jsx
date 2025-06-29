@@ -6,6 +6,8 @@ import AxiosDemo from "./components/axios.jsx";
 import Question from "./components/question.jsx";
 import UserListApp from "./components/usemom.jsx";
 import Calendar from "./components/calander/calander2.jsx";
+import Question2 from "./components/question2.jsx";
+import  CounterWithReducer  from "./components/useReducer.jsx";
 export default function App() {
   return (
     <>
@@ -17,9 +19,11 @@ export default function App() {
       {/* <UserListApp /> */}
       {/* <AxiosDemo/> */}
       {/* <PasswordGenerator /> */}
-      <Question/>
+      {/* <Question/> */}
+      {/* <Question2 /> */}
+      <CounterWithReducer />
       {/* <Calendar/> */}
-      </>
+    </>
   );
 }
 
