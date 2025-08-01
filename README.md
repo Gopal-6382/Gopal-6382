@@ -45,10 +45,10 @@
   <a href="https://linkedin.com/in/gopalkrishnan-dev" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a> 
-  <a href="https://instagram.com/YOUR_USERNAME" target="_blank">
+  <a href="https://www.instagram.com/gopal_krishnan_gk/#" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a> 
-  <a href="https://fiverr.com/YOUR_USERNAME" target="_blank">
+  <a href="https://www.fiverr.com/?msockid=38cf5678346a6706192c406b35156688" target="_blank">
     <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" />
   </a> 
 </p>
