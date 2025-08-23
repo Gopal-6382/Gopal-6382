@@ -11,51 +11,33 @@
 
 ---
 
+## 🏠 About Me
+
+**Gopala Krishnan** | Palani, Tamil Nadu  
+Email: gopalkrishnanto@email.com | Phone: +91 63829 72585  
+[LinkedIn](https://linkedin.com/in/gopalkrishnan-dev) | [GitHub](https://github.com/Gopal-6382) | [Portfolio](#)  
+
+- Bachelor of Science in Computer Science, Arulmigu Palani Andavar College | CGPA: 9  
+- Languages: JavaScript, Java, C++, C, Linux  
+- Web: HTML, CSS, React, Bootstrap, Express, Node.js, Sass, Tailwind  
+- App Development: Android Studio, XML, Gradle, Maven, Log4j  
+- Databases: Firebase, MySQL, RoomDB, SQL, NoSQL, JSON  
+- Tools: Git, GitHub, CI/CD, Agile, Postman  
+- Testing: Logcat, Emulator, DevTools, ADB, JUnit, Espresso  
+- IDEs: Android Studio, VS Code, IntelliJ IDEA  
+- Soft Skills: Communication, Problem Solving, Self-Learning, Teamwork, Analytical Thinking  
+
+---
+
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,bootstrap,java,cpp,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,bootstrap,java,cpp,git,github,vscode,nodejs,express,mysql,firebase" />
 </p>
 
 ---
 
-## 📈 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Gopal-6382&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Gopal-6382&theme=tokyonight&hide_border=true" width="48%" />
-</p>
-
----
-
-## 💻 My Developer Journey
-
-- 🔨 Currently working on: React projects, Java & CLI programs
-- 📚 Learning: React, Tailwind CSS, APIs, and useState/useEffect hooks
-- 🚀 Goals:
-  - Make real-world UI projects
-  - Practice full-stack basics (MongoDB, Express)
-  - Build a personal portfolio that reflects my skills
-
----
-
-## 🌐 Connect with Me
-
-<p align="center"> 
-  <a href="https://linkedin.com/in/gopalkrishnan-dev" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a> 
-  <a href="https://www.instagram.com/gopal_krishnan_gk/#" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a> 
-  <a href="https://www.fiverr.com/?msockid=38cf5678346a6706192c406b35156688" target="_blank">
-    <img src="https://img.shields.io/badge/Fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" />
-  </a> 
-</p>
-
----
-
-## 🧠 Projects Highlight
+## 💻 Projects Highlight
 
 | Project                          | Description                                      | Stack Used                         | Live/Code |
 |----------------------------------|--------------------------------------------------|-------------------------------------|-----------|
@@ -64,10 +46,12 @@
 | **Weather & Currency App**       | React + API + Router – weather, QR, currency     | React, Bootstrap, API, Hooks        | [Live](https://react-components-2-cvd7-f5oghtkx6-gopal-krishnan.vercel.app) |
 | **Java/C/CPP Practice Repo**     | Console programs for learning + logic practice   | Java, C, C++, CLI                   | [Code](https://github.com/Gopal-6382/Programming-Languages) |
 | **Frontend Playground**          | UI practice with Bootstrap, Tailwind & Sass      | HTML, CSS, Tailwind, Sass, Three.js | [Code](https://github.com/Gopal-6382/Web-Learnings) |
+| **Full-Stack E-commerce Website** | Built full-stack e-commerce platform             | MERN, Tailwind, Express, MongoDB    | [Code](#) |
+| **Android Bus Timing App**       | Shows actual & predicted bus arrival times       | Java, Android Studio, XML, ARIMA    | [Code](#) |
 
 ---
 
-## 📆 August 2025 Focus
+## 📆 Focus Areas (August 2025)
 
 ```text
 📌 React state, hooks, and components
