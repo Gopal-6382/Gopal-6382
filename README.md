@@ -37,7 +37,18 @@ Email: gopalkrishnanto@email.com | Phone: +91 63829 72585
 
 ---
 
-## 💻 Projects Highlight
+## 💻 My Developer Journey
+
+- 🔨 Currently working on: React projects, Java & CLI programs  
+- 📚 Learning: React, Tailwind CSS, APIs, useState/useEffect hooks  
+- 🚀 Goals:  
+  - Make real-world UI projects  
+  - Practice full-stack basics (MongoDB, Express)  
+  - Build a personal portfolio that reflects my skills  
+
+---
+
+## 🧠 Projects Highlight
 
 | Project                          | Description                                      | Stack Used                         | Live/Code |
 |----------------------------------|--------------------------------------------------|-------------------------------------|-----------|
@@ -51,7 +62,7 @@ Email: gopalkrishnanto@email.com | Phone: +91 63829 72585
 
 ---
 
-## 📆 Focus Areas (August 2025)
+## 📆 August 2025 Focus
 
 ```text
 📌 React state, hooks, and components
